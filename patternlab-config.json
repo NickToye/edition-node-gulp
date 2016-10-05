@@ -35,7 +35,7 @@
   "ignored-directories" : ["scss"],
   "debug": false,
   "ishControlsHide": {
-    "s": false,
+    "s": true,
     "m": false,
     "l": false,
     "full": false,
