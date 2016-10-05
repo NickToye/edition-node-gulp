@@ -1,41 +1,46 @@
 {
-  "paths" : {
-    "source" : {
+  "paths": {
+    "source": {
       "root": "./source/",
-      "patterns" : "./source/_patterns/",
-      "data" : "./source/_data/",
+      "patterns": "./source/_patterns/",
+      "data": "./source/_data/",
       "meta": "./source/_meta/",
-      "annotations" : "./source/_annotations/",
-      "styleguide" : "./node_modules/styleguidekit-assets-default/dist/",
-      "patternlabFiles" : "./node_modules/styleguidekit-mustache-default/views/",
-      "js" : "./source/js",
-      "images" : "./source/images",
-      "fonts" : "./source/fonts",
-      "css" : "./source/css/"
+      "annotations": "./source/_annotations/",
+      "styleguide": "./node_modules/styleguidekit-assets-default/dist/",
+      "patternlabFiles": "./node_modules/styleguidekit-mustache-default/views/",
+      "js": "./source/js",
+      "images": "./source/images",
+      "fonts": "./source/fonts",
+      "css": "./source/css/"
     },
-    "public" : {
-      "root" : "./public/",
-      "patterns" : "./public/patterns/",
-      "data" : "./public/styleguide/data/",
-      "annotations" : "./public/annotations/",
-      "styleguide" : "./public/styleguide/",
-      "js" : "./public/js",
-      "images" : "./public/images",
-      "fonts" : "./public/fonts",
-      "css" : "./public/css"
+    "public": {
+      "root": "./public/",
+      "patterns": "./public/patterns/",
+      "data": "./public/styleguide/data/",
+      "annotations": "./public/annotations/",
+      "styleguide": "./public/styleguide/",
+      "js": "./public/js",
+      "images": "./public/images",
+      "fonts": "./public/fonts",
+      "css": "./public/css"
     }
   },
-  "styleGuideExcludes": [
-  ],
+  "styleGuideExcludes": [],
   "defaultPattern": "all",
   "defaultShowPatternInfo": false,
-  "cleanPublic" : true,
+  "cleanPublic": true,
   "patternExtension": "mustache",
-  "ignored-extensions" : ["scss", "DS_Store", "less"],
-  "ignored-directories" : ["scss"],
+  "ignored-extensions": [
+    "scss",
+    "DS_Store",
+    "less"
+  ],
+  "ignored-directories": [
+    "scss"
+  ],
   "debug": false,
   "ishControlsHide": {
-    "s": true,
+    "s": false,
     "m": false,
     "l": false,
     "full": false,
@@ -53,9 +58,12 @@
   },
   "ishMinimum": "240",
   "ishMaximum": "2600",
-  "patternStateCascade": ["inprogress", "inreview", "complete"],
-  "patternStates": {
-  },
+  "patternStateCascade": [
+    "inprogress",
+    "inreview",
+    "complete"
+  ],
+  "patternStates": {},
   "patternExportPatternPartials": [],
   "patternExportDirectory": "./pattern_exports/",
   "cacheBust": true,
@@ -65,5 +73,6 @@
     "rawTemplate": "",
     "markupOnly": ".markup-only"
   },
-  "cleanOutputHtml": true
+  "cleanOutputHtml": true,
+  "plugin-node-tab": false
 }

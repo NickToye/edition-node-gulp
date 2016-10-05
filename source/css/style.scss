@@ -1,0 +1,19 @@
+@import "../../node_modules/inuitcss/example.main.scss";
+
+// To put into reset
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+input, textarea, button {
+	width: 100%;
+}
+
+* {
+	&:focus {
+		outline: none;
+	}
+}

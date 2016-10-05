@@ -8,7 +8,7 @@
       "alt": "Avatar"
     },
     "square": {
-      "src": "http://placeimg.com/300/300/nature",
+      "src": "http://placeimg.com/600/600/nature",
       "alt": "Square"
     },
     "rectangle": {
@@ -20,9 +20,17 @@
       "alt": "4x3 Image"
     },
     "landscape-16x9": {
-      "src": "http://placeimg.com/640/360/tech",
+      "src": "http://placeimg.com/1800/360/tech",
       "alt": "16x9 Image"
+    },
+    "hero": {
+	    "src": "http://placeimg.com/1800/720/tech",
+	    "alt": "Hero Image"
     }
+  },
+  "button": {
+	  "button": "Button",
+	  "text": "Text"
   },
   "headline": {
     "short": "Lorizzle pimpin' dolizzle sit amet I",
