@@ -1,0 +1,10 @@
+$palettes: (
+	neutral: (
+    	white: $sofology-white,
+    	pale-grey: $sofology-pale-grey,
+    	light-grey: $sofology-light-grey,
+    	medium-grey: $sofology-medium-grey,
+    	dark-grey: $sofology-dark-grey,
+    	black: $sofology-black
+	)
+);

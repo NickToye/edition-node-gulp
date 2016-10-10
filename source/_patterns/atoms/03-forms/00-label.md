@@ -1,5 +1,5 @@
 ---
 title: Label
-state: inprogress
+state: complete
 ---
-This is a *Markdown* description of my pattern.
+A very basic label implementation.

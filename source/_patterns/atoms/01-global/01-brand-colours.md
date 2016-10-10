@@ -1,5 +1,5 @@
 ---
 title: Brand Colours
-state: inprogress
+state: inreview
 ---
 This color palette contains Sofology-specific colors to be used throughout the website.

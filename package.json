@@ -5,6 +5,7 @@
   "dependencies": {
     "browser-sync": "^2.0.0",
     "gulp": "gulpjs/gulp#4.0",
+    "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "inuitcss": "^6.0.0-beta.3",
     "minimist": "^1.2.0",

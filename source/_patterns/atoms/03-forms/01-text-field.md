@@ -2,4 +2,4 @@
 title: Text Field
 state: inprogress
 ---
-This is a *Markdown* description of my pattern.
+A very basic text field implementation.

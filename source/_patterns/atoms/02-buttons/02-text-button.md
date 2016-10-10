@@ -1,5 +1,5 @@
 ---
 title: Text Button
-state: inprogress
+state: inreview
 ---
-This is a *Markdown* description of my pattern.
+A very basic text button.
