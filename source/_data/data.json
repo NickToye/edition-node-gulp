@@ -28,6 +28,7 @@
 	    "alt": "Hero Image"
     }
   },
+  "message": "Foo",
   "button": {
 	  "button": "Button",
 	  "text": "Text"

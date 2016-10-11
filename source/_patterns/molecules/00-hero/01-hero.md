@@ -1,5 +1,5 @@
 ---
 title: Hero
-state: inprogress
+state: inreview
 ---
-This is a *Markdown* description of my pattern.
+Basic centered hero text, no backgrounds applied

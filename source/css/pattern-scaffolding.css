@@ -54,3 +54,8 @@
   line-height: 1;
 }
 
+.sg-modal {
+	
+	display: none;
+	height: 25% !important;
+}
