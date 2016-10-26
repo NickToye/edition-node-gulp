@@ -42,11 +42,14 @@
 }
 
 .sg-swatch {
-  display: block;
+  display: flex;
   height: 4em;
   margin-bottom: 0.3em;
   border-radius: 5px;
   border: 1px solid rgba(0,0,0,.2);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sg-label {
@@ -55,7 +58,13 @@
 }
 
 .sg-modal {
-	
+
 	display: none;
 	height: 25% !important;
 }
+
+.sg-contrast {
+    background: black;
+    padding: 24px;
+}
+

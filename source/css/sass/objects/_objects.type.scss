@@ -1,0 +1,328 @@
+/* Sass :: Base :: Type */
+
+/*
+	Created:		7.1.16
+	Modified:
+	Author:			Nick Toye
+	Version:		2.0
+	Dependencies:	Inuit CSS
+*/
+
+// Typography  NB :: Fonts are called through Fort Awesome now
+@include font-face(FS-Emeric-Thin, '../fonts/FSEmericWeb-Thin');
+@include font-face(FS-Emeric-ExtraLight, '../fonts/FSEmericWeb-ExtraLight');
+@include font-face(FS-Emeric-Light, '../fonts/FSEmericWeb-Light');
+@include font-face(FS-Emeric-Regular, '../fonts/FSEmericWeb-Regular');
+@include font-face(FS-Emeric-Medium, '../fonts/FSEmericWeb-Medium');
+@include font-face(FS-Emeric-Italic, '../fonts/fs_emeric-italic-webfont');
+@include font-face(FS-Emeric-SemiBold, '../fonts/fs_emeric-semibold-webfont');
+@include font-face(FS-Emeric-Bold, '../fonts/FSEmericWeb-Bold');
+@include font-face(FS-Emeric-Book, '../fonts/FSEmericWeb-Book');
+@include font-face(FS-Emeric-Core, '../fonts/FSEmeric-Core');
+
+
+$fs-emeric-thin:																"FS-Emeric-Thin", Helvetica, sans-serif;
+// $fs-emeric-extralight:														"FS-Emeric-ExtraLight", Helvetica, sans-serif;
+$fs-emeric-light:																"FS-Emeric-Light", Helvetica, sans-serif;
+$fs-emeric-medium:																"FS-Emeric-Medium", Helvetica, sans-serif;
+$fs-emeric-regular:																"FS-Emeric-Regular", Helvetica, sans-serif;
+// $fs-emeric-italic:															"FS-Emeric-Italic", Helvetica, sans-serif;
+// $fs-emeric-semibold:															"FS-Emeric-SemiBold", Helvetica, sans-serif;
+$fs-emeric-bold:																"FS-Emeric-Bold", Helvetica, sans-serif;
+$fs-emeric-book:																"FS-Emeric-Book", Helvetica, sans-serif;
+$fs-emeric-core:																"FS-Emeric-Core", Helvetica, sans-serif;
+
+.fs-emeric-thin {font-family: $fs-emeric-thin;}
+// 	.fs-emeric-extralight {font-family: $fs-emeric-extralight;}
+.fs-emeric-light {font-family: $fs-emeric-light;}
+.fs-emeric-regular {font-family: $fs-emeric-regular;}
+.fs-emeric-medium {font-family: $fs-emeric-medium;}
+// 	.fs-emeric-italic {font-family: $fs-emeric-italic;}
+// 	.fs-emeric-semibold {font-family: $fs-emeric-semibold;}
+.fs-emeric-bold {font-family: $fs-emeric-bold;}
+.fs-emeric-book {font-family: $fs-emeric-book;}
+.fs-emeric-core {font-family: $fs-emeric-core;}
+
+// Font palette, all the above stuff will be removed
+
+// Font Family
+$typeface: (
+    'sofology-light': fs-emeric-light,
+    'sofology-book': fs-emeric-book,
+    'sofology-medium': fs-emeric-medium,
+    'sofology-regular': fs-emeric-regular,
+    'sofology-core': fs-emeric-core,
+    'sofology-thin': fs-emeric-thin,
+    'sofology-bold': fs-emeric-bold
+);
+
+// Function is here because of the cascade chain.
+@function typeface($key: 'fs-emeric-light') {
+    @return map-get($typeface, $key);
+}
+
+// Typography Map
+
+$type-sizes: (
+    h1: (
+        fs: rem(36),
+        lh: rem(34),
+        typeface: typeface('sofology-light'),
+        bp:(
+            (
+                breakpoint: 'city',
+                fs: rem(48),
+                lh: rem(43)
+            ),
+            (
+                breakpoint: 'country',
+                fs: rem(50),
+                lh: rem(45)
+            )
+        )
+    ),
+    h2: (
+        fs: rem(26),
+        lh: rem(29),
+        typeface: typeface('sofology-light'),
+        bp:(
+            (
+                breakpoint: 'city',
+                fs: rem(38),
+                lh: rem(38)
+            ),
+            (
+                breakpoint: 'country',
+                fs: rem(38),
+                lh: rem(40)
+            )
+        )
+    ),
+    h3: (
+        fs: rem(24),
+        lh: rem(23),
+        typeface: typeface('sofology-light'),
+        bp:(
+            (
+                breakpoint: 'city',
+                fs: rem(24),
+                lh: rem(23)
+            ),
+            (
+                breakpoint: 'country',
+                fs: rem(26),
+                lh: rem(25)
+            )
+        )
+    ),
+    h4: (
+        fs: rem(32),
+        lh: rem(33),
+        typeface: typeface('sofology-book'),
+        bp:(
+            (
+                breakpoint: 'city',
+                fs: rem(32),
+                lh: rem(31),
+                typeface: typeface('sofology-light')
+            ),
+            (
+                breakpoint: 'country',
+                fs: rem(20),
+                lh: rem(20),
+                typeface: typeface('sofology-book')
+            )
+        )
+    ),
+    h5: (
+        fs: rem(14),
+        lh: rem(14),
+        typeface: typeface('sofology-book'),
+        bp: (
+
+        )
+    ),
+    p: (
+        fs: rem(24),
+        lh: rem(28),
+        typeface: typeface('sofology-regular'),
+        bp: (
+            (
+                breakpoint: 'city',
+                fs: rem(16),
+                lh: rem(21)
+            ),
+            (
+                breakpoint: 'country',
+                fs: rem(18),
+                lh: rem(23)
+            )
+        )
+    )
+);
+
+
+// Weights
+.light { font-family: typeface(sofology-light); }
+.normal { font-family: typeface(sofology-regular); }
+.medium { font-family: typeface(sofology-medium); }
+
+strong {
+    font-weight: normal;
+}
+
+* {
+	text-rendering: optimizeLegibility;
+}
+
+html {
+    font-family: typeface(sofology-regular);
+}
+
+body {
+	font-family: typeface(sofology-light);
+	color: palette(sofology,medium-grey);
+
+}
+
+// Headings
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, p {
+	font-weight: normal;
+    letter-spacing: tracking(-30);
+	margin-top: 0;
+	margin-bottom: 35px;
+	text-transform: none;
+}
+
+
+h1 { @include typesetting(h1); }
+h2 { @include typesetting(h2); }
+h3 { @include typesetting(h3); }
+h4 { @include typesetting(h4); }
+h5 { @include typesetting(h5); }
+p { @include typesetting(p); }
+
+
+// Text transforms
+
+
+// Contextual classes
+.error {
+	color: palette(sofology,outlet-red) !important;
+}
+
+abbr {
+    cursor: help;
+}
+
+// Links
+a {
+	color: palette(sofology,blue);
+	cursor: pointer;
+	text-decoration: none;
+	transition: all .3s linear;
+	&:hover {
+		color: darken(palette(sofology,blue),15%);
+		text-decoration: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+// Lists
+/*
+ul, ol {
+	@include inuit-font-size($inuit-paragraph-size-mob, $inuit-paragraph-lineheight-size-mob);
+    @include media-query(city) {
+    	@include inuit-font-size($inuit-paragraph-size-tab, $inuit-paragraph-lineheight-size-tab);
+    }
+    @include media-query(country) {
+    	@include inuit-font-size($inuit-paragraph-size, $inuit-paragraph-lineheight-size);
+    }
+    font-family: typeface(sofology-regular);
+    margin-bottom: 35px;
+	padding-left: 17px;
+	// Unstyled
+	&.list-unstyled {
+		list-style: none;
+		padding-left: 0;
+	}
+	&.list-inline {
+		list-style: none;
+		margin-left: -5px;
+		padding-left: 0;
+		> li {
+
+			display: inline-block;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+
+    &.list {
+
+        &--unstyled {
+            @extend %spacing-reset;
+            list-style: none;
+    	}
+
+    	&--inline {
+            list-style: none;
+            margin-left: -5px;
+            padding-left: 0;
+            > li {
+                display: inline-block;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+    	}
+	}
+
+}
+
+dl {
+	dt {
+    	font-family: typeface(sofology-medium);
+	}
+	dd {
+		@extend .u-mb;
+		margin: 0;
+	}
+}
+*/
+
+
+
+// Contextual colours
+.sofology-blue {
+	// color: palette(sofology,blue);
+}
+.sofology-pink {
+	color: palette(sofology,pink);
+}
+.sofology-yellow {
+	color: palette(sofology,yellow);
+}
+.neutral {
+	color: palette(sofology,medium-grey);
+}
+
+// Code & Pre
+
+/*
+pre {
+    @extend .u-p;
+    background: palette(sofology,mine-shaft);
+    border-radius: $radius;
+    code {
+        background: none;
+        color: palette(sofology,white);
+        font-size: rem(15px);
+    }
+}
+
+code {
+    background: palette(sofology,pale-grey);
+}
+*/

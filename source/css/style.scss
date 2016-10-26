@@ -1,4 +1,5 @@
-@import "../../node_modules/inuitcss/example.main.scss";
+@import "sass/global";
+
 
 // To put into reset
 
@@ -19,127 +20,330 @@ input, textarea, button {
 }
 
 
-
-// Hero Blocks
-
-@media screen and (min-width: 1200px) {
-
-	.c-block-hero {
-	    display: flex;
-	    flex-direction: column;
-	    justify-content: center;
-	    position: relative;
-	    
-	    &--muted {
-		    
-		    &:after {
-			    content: '';
-			    position: absolute;
-			    top: 0;
-			    left: 0;
-			    right: 0;
-			    bottom: 0;
-			    background: rgba(0,0,0,.6);
-			    z-index: 1;
-		    }
-	    }
-	    
-	    &__wrapper {
-		    outline: 1px dashed rgba(white,.3);
-		    display: flex;
-		    align-self: center;
-		    justify-content: center;
-		    position: absolute;
-		    width: 90%;
-		    text-align: center;
-		    
-		    .c-block-hero--left-text & {
-			    justify-content: flex-start;
-			    text-align: left;
-			    padding-left: 5%;
-			    align-self: flex-start;
-			    width: 50%;
-			    
-			    
-		    }
-		    
-		    .c-block-hero--left-text,
-		    .c-block-hero--textbg & {
-			    padding-left: 4%;
-		    }
-		    
-		    
-		    
-		    
-		    .c-block-hero--right-text & {
-			    justify-content: flex-end;
-			    text-align: left;
-			    padding-right: 4%;
-			    padding-left: 0;
-			    align-self: flex-end;
-			    width: 50%;
-		    }
-		    
-		    .c-block-hero--muted & {
-			    z-index: 2;
-		    }
-		    
-		    .c-block-hero--half-left & {
-			    width: 50%;
-			    background: rgba(0,0,0,.8);
-			    align-self: flex-start;
-			    height: 100%;
-			    text-align: left;
-		    }
-		    
-		    .c-block-hero--half-right & {
-			    width: 50%;
-			    background: rgba(0,0,0,.8);
-			    align-self: flex-end;
-			    height: 100%;
-			    text-align: left;
-		    }
-	    }
-	
-	    &__text {
-		    outline: 1px dashed rgba(white,.3);
-		    width: 78%;
-		    align-self: center;
-// 		    display: flex;
-		    flex-direction: column;
-	        color: white;
-			
-			.c-block-hero--textbg & {
-				background: rgba(0,0,0,.8);
-				padding: 25px;
-				
-			}
-	    }
-	    
-	    
-		
-	
-	}
-
-}
-
-
-.dark-bg {
-	background: black;
-	padding: 16px;
-}
-
 // Buttons
 
 .c-btn {
+    border-width: 2px;
+    border-style: solid;
 	border-radius: 0;
 	padding: 16px 32px;
 	&--brand {
-		
+
 		background: transparent;
-		border: 2px solid white;
-		color: white;
+// 		border: 2px solid white;
+// 		color: white;
 		width: auto;
 		text-transform: uppercase;
 	}
+}
+
+
+// Hero Blocks
+
+.c-banner {
+	background: #3F3F3F;
+	color: palette(sofology, white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 35px 0;
+    position: relative;
+
+    &--img,
+    &--video,
+    &--muted {
+	    padding: 0;
+    }
+
+    &--h-align-left {
+
+    }
+
+    &--takeover {
+
+        height: 100vh;
+        padding: 0;
+        img {
+            @include size(100%);
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+    }
+
+    &--parallax {
+        padding: 0;
+
+    }
+
+    .parallax {
+        display: flex;
+        align-items: center;
+        background-image: url('http://placeimg.com/1572/1118/nature');
+        height: 1000px;
+
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &--takeover {
+            height: 100vh;
+        }
+    }
+
+    // TEST THIS
+    &--half-left {
+        background: none;
+    }
+
+    &--muted {
+
+	    &:after {
+		    content: '';
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    background-color: inherit;
+// 			    opacity: .6;
+		    z-index: 1;
+	    }
+
+	    &--20:after {
+		    opacity: .2;
+	    }
+	    &--40:after {
+		    opacity: .4;
+	    }
+	    &--60:after {
+		    opacity: .6;
+	    }
+	    &--80:after {
+		    opacity: .8;
+	    }
+
+
+    }
+
+    &--muted-txt {
+
+        position: relative;
+
+	    &:after {
+		    content: '';
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    background-color: inherit;
+		    z-index: 1;
+	    }
+
+	    &--20:after {
+		    opacity: .2;
+	    }
+	    &--40:after {
+		    opacity: .4;
+	    }
+	    &--60:after {
+		    opacity: .6;
+	    }
+	    &--80:after {
+		    opacity: .8;
+	    }
+
+
+
+
+    }
+
+
+    &--muted-half {
+
+        position: relative;
+
+	    &:after {
+		    content: '';
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    background-color: inherit;
+		    z-index: 1;
+	    }
+
+	    &--20:after {
+		    opacity: .2;
+	    }
+	    &--40:after {
+		    opacity: .4;
+	    }
+	    &--60:after {
+		    opacity: .6;
+	    }
+	    &--80:after {
+		    opacity: .8;
+	    }
+
+
+
+
+    }
+
+
+    // Vertical Align the banner container
+    &--v-align-top {
+        justify-content: flex-start;
+
+    }
+
+    &--v-align-bottom {
+	    justify-content: flex-end;
+    }
+
+
+    // Wrapper
+    &__wrapper {
+
+	    display: flex;
+	    align-self: center;
+	    justify-content: center;
+	    width: 90%;
+	    text-align: center;
+
+	    .c-banner--img &,
+	    .c-banner--video &,
+	    .c-banner--muted &,
+	    .c-banner--takeover & {
+		    position: absolute;
+	    }
+	    .c-banner--parallax & {
+    	    margin: 0 5%;
+	    }
+
+        // Vertically Align the wrapper
+        .c-banner--v-align-top & {
+            padding-top: 35px;
+        }
+
+        .c-banner--v-align-bottom & {
+            padding-bottom: 35px;
+        }
+
+        // Horizontally Align the wrapper
+        .c-banner--h-align-left & {
+            align-self: flex-start;
+            justify-content: flex-start;
+            width: 95%;
+            margin: 0 2.5%;
+            .c-banner__text {
+                width: 50%;
+                align-self: flex-start;
+            }
+        }
+
+        .c-banner--h-align-right & {
+            align-self: flex-start;
+            justify-content: flex-end;
+            width: 95%;
+            margin: 0 2.5%;
+            .c-banner__text {
+                width: 50%;
+                align-self: flex-end;
+            }
+        }
+
+
+
+	    .c-banner--left-text & {
+		    justify-content: flex-start;
+		    text-align: left;
+		    padding-left: 5%;
+		    align-self: flex-start;
+		    width: 50%;
+
+
+	    }
+
+	    .c-banner--left-text {
+		    padding-left: 4%;
+	    }
+
+
+
+
+	    .c-banner--right-text & {
+		    justify-content: flex-end;
+		    text-align: left;
+		    padding-right: 4%;
+		    padding-left: 0;
+		    align-self: flex-end;
+		    width: 50%;
+	    }
+
+	    .c-banner--muted & {
+		    z-index: 2;
+	    }
+
+	    .c-banner--half-left & {
+    	    background: inherit;
+		    width: 50%;
+		    align-self: flex-start;
+		    height: 100%;
+		    text-align: left;
+	    }
+
+	    .c-banner--half-right & {
+		    width: 50%;
+		    align-self: flex-end;
+		    height: 100%;
+		    text-align: left;
+	    }
+    }
+
+    &__text {
+	    width: 78%;
+	    align-self: center;
+	    flex-direction: column;
+        color: inherit;
+
+		&--bg {
+// 			background-color: inherit;
+			padding: 25px;
+		}
+
+		&--inner {
+			position: relative;
+			z-index: 2;
+		}
+
+
+
+    }
+
+    .c-btn {
+        border-color: inherit;
+        color: inherit;
+    }
+
+
+}
+
+
+
+
+// Forms
+
+form.form {
+    max-width: 400px;
+}
+
+// Media
+
+video {
+    max-width: 100%;
+    height: auto;
 }

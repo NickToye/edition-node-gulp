@@ -24,15 +24,16 @@
       "alt": "16x9 Image"
     },
     "hero": {
-	    "src": "http://placeimg.com/1800/720/tech",
+	    "src": "http://placeimg.com/3600/1720/tech",
 	    "alt": "Hero Image"
+    },
+    "takeover": {
+        "src": "http://placeimg.com/1572/1118/tech",
+        "alt": "Takeover Image"
     }
   },
   "message": "Foo",
-  "button": {
-	  "button": "Button",
-	  "text": "Text"
-  },
+  "button": "Button",
   "headline": {
     "short": "Lorizzle pimpin' dolizzle sit amet I",
     "medium": "Rizzle adipiscing elizzle. Nullam sapien velizzle, shit volutpizzle, my"

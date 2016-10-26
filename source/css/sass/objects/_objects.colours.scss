@@ -1,0 +1,42 @@
+/* Sass :: Objects :: Colour */
+
+/*
+	Created:		7.1.16
+	Modified:
+	Author:			Nick Toye
+	Version:		2.0
+	Dependencies:	Inuit CSS
+*/
+
+.sofology-red-bg { @include componentContrast(outlet-red);}
+.sofology-blue-bg { @include componentContrast(blue); }
+.sofology-pink-bg { @include componentContrast(pink); }
+.sofology-yellow-bg { @include componentContrast(yellow, light); }
+.sofology-white-bg { @include componentContrast(white,light); }
+.sofology-pale-grey-bg { @include componentContrast(pale-grey,light); }
+.sofology-light-grey-bg { @include componentContrast(light-grey,light); }
+.sofology-medium-grey-bg { @include componentContrast(medium-grey); }
+.sofology-dark-grey-bg { @include componentContrast(dark-grey); }
+.sofology-black-bg { @include componentContrast(black); }
+
+.sofology-red-txt-bg:after { @include componentContrast(outlet-red); }
+.sofology-blue-txt-bg:after { @include componentContrast(blue); }
+.sofology-pink-txt-bg:after { @include componentContrast(pink); }
+.sofology-yellow-txt-bg:after { @include componentContrast(yellow, light); }
+.sofology-white-txt-bg:after { @include componentContrast(white,light); }
+.sofology-pale-grey-txt-bg:after { @include componentContrast(pale-grey,light); }
+.sofology-light-grey-txt-bg:after { @include componentContrast(light-grey,light); }
+.sofology-medium-grey-txt-bg:after { @include componentContrast(medium-grey); }
+.sofology-dark-grey-txt-bg:after { @include componentContrast(dark-grey); }
+.sofology-black-txt-bg:after { @include componentContrast(black); }
+
+.sofology-red-half-bg:after { @include componentContrast(outlet-red); }
+.sofology-blue-half-bg:after { @include componentContrast(blue); }
+.sofology-pink-half-bg:after { @include componentContrast(pink); }
+.sofology-yellow-half-bg:after { @include componentContrast(yellow, light); }
+.sofology-white-half-bg:after { @include componentContrast(white,light); }
+.sofology-pale-grey-half-bg:after { @include componentContrast(pale-grey,light); }
+.sofology-light-grey-half-bg:after { @include componentContrast(light-grey,light); }
+.sofology-medium-grey-half-bg:after { @include componentContrast(medium-grey); }
+.sofology-dark-grey-half-bg:after { @include componentContrast(dark-grey); }
+.sofology-black-half-bg:after { @include componentContrast(black); }

@@ -1,0 +1,44 @@
+/* Sass :: Settings :: Colours */
+
+/*
+	Created:		7.1.16
+	Author:			Nick Toye
+	Version:		2.0
+	Dependencies:	Inuit CSS
+*/
+
+// - Blacks & Whites
+$black:																			rgb(0,0,0);
+$white:																			rgb(255,255,255);
+$neutral:																		rgb(237,237,237);
+
+// - Neutral Colours
+$gray: (
+	'darker': lighten($black,13.5%), // #242424
+	'dark': lighten($black,20%), // #333333
+	'mid': lighten($black,33.5%), // #575757
+	'light': lighten($black,60%), // #999999
+	'lighter': lighten($black,86.5%), // #dedede
+	'lightest': rgb(247,247,247), // #f7f7f7
+	'platinum': rgb(229,229,227) // e5e5e3
+);
+
+// - Brand
+
+
+
+
+$palettes: (
+	sofology: (
+    	blue: #009FEE,
+    	pink: rgb(222,0,123),
+    	yellow: rgb(255,240,0),
+    	white: rgb(255,255,255),
+    	pale-grey: #F7F7F7,
+    	light-grey: #E5E5E5,
+    	medium-grey: #3F3F3F,
+    	dark-grey: #202020,
+    	outlet-red: #9F090A,
+    	black: rgb(0,0,0)
+	)
+);
