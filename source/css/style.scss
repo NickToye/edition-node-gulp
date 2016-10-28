@@ -7,6 +7,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
 }
 
 input, textarea, button {
@@ -23,17 +24,22 @@ input, textarea, button {
 // Buttons
 
 .c-btn {
+
     border-width: 2px;
     border-style: solid;
 	border-radius: 0;
-	padding: 16px 32px;
+	padding: 17px 20px;
+	width: auto;
 	&--brand {
 
 		background: transparent;
-// 		border: 2px solid white;
-// 		color: white;
-		width: auto;
 		text-transform: uppercase;
+	}
+
+	&--primary {
+    	background: palette(sofology, blue);
+        border: none;
+        text-transform: uppercase;
 	}
 }
 
@@ -46,6 +52,7 @@ input, textarea, button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 530px;
     padding: 35px 0;
     position: relative;
     z-index: 2;
@@ -249,6 +256,7 @@ input, textarea, button {
         .c-banner--h-align-right & {
             align-self: flex-start;
             justify-content: flex-end;
+            text-align: left;
             width: 95%;
             margin: 0 2.5%;
             .c-banner__text {
@@ -373,8 +381,24 @@ input, textarea, button {
 
 // Forms
 
-form.form {
+form.c-form {
     max-width: 400px;
+
+    &--inline {
+
+        .c-controls {
+            display: flex;
+
+            &__control {
+                @include typesetting(input);
+                border: none;
+                color: palette(sofology, medium-grey);
+                padding: 19px 25px;
+            }
+        }
+    }
+
+
 }
 
 // Media
@@ -393,4 +417,23 @@ form.form {
         width: 100%;
         height: 100%;
     }
+}
+
+
+.actions {
+    display: flex;
+//     justify-content: space-between;
+    button {
+        margin-right: 20px;
+    }
+}
+
+
+
+// Image Peek
+
+.imagePeek {
+    @include position($top: 5%, $left: -15%);
+    max-height: 90%;
+    transform: translate(-50%, -50%);
 }

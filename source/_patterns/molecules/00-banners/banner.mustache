@@ -16,16 +16,34 @@
     </div>
     {{/ video }}
 
+    {{# imageSlideIn }}
+        <img class="imagePeek animated fadeInLeftBig" src="http://a3.images.sofology.co.uk/q_70,w_1600,c_scale,fl_lossy,f_auto/productmedia/scoops/507-23333.png">
+    {{/ imageSlideIn }}
+
+
 	<div class="c-banner__wrapper{{# sofology-blue-half-bg }} sofology-blue-half-bg {{/ sofology-blue-half-bg }}{{# sofology-red-half-bg }} sofology-red-half-bg {{/ sofology-red-half-bg }}{{# sofology-pale-grey-half-bg }} sofology-pale-grey-half-bg {{/ sofology-pale-grey-half-bg }}{{# sofology-light-grey-half-bg }} sofology-light-grey-half-bg {{/ sofology-light-grey-half-bg }}{{# sofology-medium-grey-half-bg }} sofology-medium-grey-half-bg {{/ sofology-medium-grey-half-bg }}{{# sofology-dark-grey-half-bg }} sofology-dark-grey-half-bg {{/ sofology-dark-grey-half-bg }}{{# sofology-black-half-bg }} sofology-black-half-bg {{/ sofology-black-half-bg }}{{# muted-half }} c-banner--muted-half{{/ muted-half }}{{# muted-20 }} c-banner--muted--20 {{/ muted-20 }}{{# muted-40 }} c-banner--muted--40 {{/ muted-40 }}{{# muted-60 }} c-banner--muted--60 {{/ muted-60 }}{{# muted-80 }} c-banner--muted--80 {{/ muted-80 }}">
+
+
 
 	    <div class="c-banner__text{{# text-background }} c-banner__text--bg  {{/ text-background }}{{# sofology-blue-txt-bg }} sofology-blue-txt-bg {{/ sofology-blue-txt-bg }}{{# sofology-red-txt-bg }} sofology-red-txt-bg {{/ sofology-red-txt-bg }}{{# sofology-pale-grey-txt-bg }} sofology-pale-grey-txt-bg {{/ sofology-pale-grey-txt-bg }}{{# sofology-light-grey-txt-bg }} sofology-light-grey-txt-bg {{/ sofology-light-grey-txt-bg }}{{# sofology-medium-grey-txt-bg }} sofology-medium-grey-txt-bg {{/ sofology-medium-grey-txt-bg }}{{# sofology-dark-grey-txt-bg }} sofology-dark-grey-txt-bg {{/ sofology-dark-grey-txt-bg }}{{# sofology-black-txt-bg }} sofology-black-txt-bg {{/ sofology-black-txt-bg }}{{# muted-txt }} c-banner--muted-txt{{/ muted-txt }}{{# muted-20 }} c-banner--muted--20 {{/ muted-20 }}{{# muted-40 }} c-banner--muted--40 {{/ muted-40 }}{{# muted-60 }} c-banner--muted--60 {{/ muted-60 }}{{# muted-80 }} c-banner--muted--80 {{/ muted-80 }}">
 
     	    <div class="c-banner__text--inner">
 
-    		    <h1>Prices that start low and stay low</h1>
-    		    <p>We could spend lots of time and effort creating endless sales and promotions. Raising prices to lower them again and misleading you on the real value of your new sofa, but we don't believe in that. Instead we offer the best price we can permanently and spend our time finding great sofa collections that will make you feel right at home instead.</p>
-    		    {{> molecules-brand}}
+    		    <h1 class="{{# animated }} animated {{/ animated }}  {{# fadeInUp }} fadeInUp {{/ fadeInUp }}">Prices that start low and stay low</h1>
+    		    <p class="{{# animated }} animated {{/ animated }}  {{# fadeInUp }} fadeInUp {{/ fadeInUp }}">We could spend lots of time and effort creating endless sales and promotions. Raising prices to lower them again and misleading you on the real value of your new sofa, but we don't believe in that. Instead we offer the best price we can permanently and spend our time finding great sofa collections that will make you feel right at home instead.</p>
+    		    <div class="actions">
+        		    {{# cta }}
+        		        {{> molecules-cta }}
+        		    {{/ cta }}
 
+        		    {{# cta2 }}
+        		        {{> molecules-cta }}
+        		    {{/ cta2 }}
+
+                    {{# storefinder }}
+                        {{> molecules-inline-form }}
+                    {{/ storefinder }}
+    		    </div>
     	    </div>
 
 	    </div>

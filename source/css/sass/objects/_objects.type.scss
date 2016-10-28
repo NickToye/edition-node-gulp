@@ -158,6 +158,40 @@ $type-sizes: (
                 lh: rem(23)
             )
         )
+    ),
+    btn: (
+        fs: rem(24),
+        lh: rem(28),
+        typeface: typeface('sofology-medium'),
+        bp: (
+            (
+                breakpoint: 'city',
+                fs: rem(16),
+                lh: rem(21)
+            ),
+            (
+                breakpoint: 'country',
+                fs: rem(24),
+                lh: rem(24)
+            )
+        )
+    ),
+    input: (
+        fs: rem(24),
+        lh: rem(28),
+        typeface: typeface('sofology-light'),
+        bp: (
+            (
+                breakpoint: 'city',
+                fs: rem(16),
+                lh: rem(21)
+            ),
+            (
+                breakpoint: 'country',
+                fs: rem(16),
+                lh: rem(24)
+            )
+        )
     )
 );
 

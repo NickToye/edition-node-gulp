@@ -161,9 +161,9 @@ function reloadJS() {
 }
 
 function watch() {
-  gulp.watch(path.resolve(paths().source.css, '**/*.css'), { awaitWriteFinish: true }).on('change', gulp.series('pl-copy:css', reloadCSS));
+//   gulp.watch(path.resolve(paths().source.css, '**/*.css'), { awaitWriteFinish: true }).on('change', gulp.series('pl-copy:css', reloadCSS));
   gulp.watch(path.resolve(paths().source.styleguide, '**/*.*'), { awaitWriteFinish: true }).on('change', gulp.series('pl-copy:styleguide', 'pl-copy:styleguide-css', reloadCSS));
-  gulp.watch(path.resolve(paths().source.css, '**/*.scss')).on('change', gulp.series('pl-sass', reloadCSS));
+  gulp.watch(path.resolve(paths().source.css, '**/*.scss')).on('change', gulp.series('pl-sass','pl-copy:css', reloadCSS));
   gulp.watch(path.resolve(paths().source.js, '**/*.js')).on('change', gulp.series('pl-copy:js', reloadJS));
 
   var patternWatches = [

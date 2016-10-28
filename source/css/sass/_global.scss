@@ -75,6 +75,8 @@
  * Hide.................Helper classes to hide content
  */
 
+// IMPORTS
+
 
 // SETTINGS
 @import "settings/settings.config";
@@ -95,9 +97,10 @@
 @import "tools/tools.mq";
 @import "tools/tools.healthcheck";
 @import "tools/tools.mixins";
+@import "tools/tools.animate";
 
 
-
+@import "imports/animate-sass/_animate.scss";
 
 
 
@@ -138,6 +141,7 @@
 @import "objects/objects.pack";
 @import "objects/objects.colours";
 @import "objects/objects.type";
+
 
 
 
