@@ -1,8 +1,18 @@
 <div class="c-banner c-banner--parallax">
 
-    {{> atoms-hero:c-block-hero__img }}
 
     <div class="parallax">
+
+        {{# video }}
+        <div class="video-container">
+            <video width="" height="" controls>
+            	<source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
+            	<source src="http://clips.vorwaerts-gmbh.de/VfE.webm" type="video/webm">
+            	<source src="http://clips.vorwaerts-gmbh.de/VfE.ogv" type="video/ogg">
+            	<img src="" width="2400" height="" alt="Big Buck Bunny" title="No video playback capabilities, please download">
+            </video>
+        </div>
+        {{/ video }}
 
         <div class="c-banner__wrapper{{# sofology-blue-half-bg }} sofology-blue-half-bg {{/ sofology-blue-half-bg }}{{# sofology-red-half-bg }} sofology-red-half-bg {{/ sofology-red-half-bg }}{{# sofology-pale-grey-half-bg }} sofology-pale-grey-half-bg {{/ sofology-pale-grey-half-bg }}{{# sofology-light-grey-half-bg }} sofology-light-grey-half-bg {{/ sofology-light-grey-half-bg }}{{# sofology-medium-grey-half-bg }} sofology-medium-grey-half-bg {{/ sofology-medium-grey-half-bg }}{{# sofology-dark-grey-half-bg }} sofology-dark-grey-half-bg {{/ sofology-dark-grey-half-bg }}{{# sofology-black-half-bg }} sofology-black-half-bg {{/ sofology-black-half-bg }}{{# muted-half }} c-banner--muted-half{{/ muted-half }}{{# muted-20 }} c-banner--muted--20 {{/ muted-20 }}{{# muted-40 }} c-banner--muted--40 {{/ muted-40 }}{{# muted-60 }} c-banner--muted--60 {{/ muted-60 }}{{# muted-80 }} c-banner--muted--80 {{/ muted-80 }}">
 
@@ -10,7 +20,7 @@
 
         	    <div class="c-banner__text--inner">
 
-        		    <h1>Prices that start low and stay low</h1>
+        		    <h1>Prices that start low and stay low ABC</h1>
         		    <p>We could spend lots of time and effort creating endless sales and promotions. Raising prices to lower them again and misleading you on the real value of your new sofa, but we don't believe in that. Instead we offer the best price we can permanently and spend our time finding great sofa collections that will make you feel right at home instead.</p>
         		    {{> molecules-brand}}
 
@@ -22,6 +32,8 @@
 
     </div>
 
-    {{> atoms-hero:c-block-hero__img }}
+
+    {{> molecules-up }}
+    {{> molecules-down }}
 
 </div>

@@ -48,7 +48,7 @@ input, textarea, button {
     justify-content: center;
     padding: 35px 0;
     position: relative;
-
+    z-index: 2;
     &--img,
     &--video,
     &--muted {
@@ -62,6 +62,7 @@ input, textarea, button {
     &--takeover {
 
         height: 100vh;
+        overflow: hidden;
         padding: 0;
         img {
             @include size(100%);
@@ -72,7 +73,7 @@ input, textarea, button {
 
     &--parallax {
         padding: 0;
-
+        z-index: 1;
     }
 
     .parallax {
@@ -329,6 +330,41 @@ input, textarea, button {
         color: inherit;
     }
 
+    .c-btn {
+        &--direction {
+            background: none;
+            border: none;
+            font-size: rem(48);
+            &.fa-angle-down {
+                @include position(absolute, $bottom: 20px);
+            }
+            &.fa-angle-up {
+                @include position(absolute, $top: 20px);
+            }
+
+
+
+        }
+
+    }
+
+    &:first-of-type {
+        .c-btn--direction {
+            &.fa-angle-up {
+                opacity: 0;
+            }
+
+        }
+    }
+
+    &:last-of-type {
+        .c-btn--direction {
+            &.fa-angle-down {
+                opacity: 0;
+            }
+        }
+    }
+
 
 }
 
@@ -343,7 +379,18 @@ form.form {
 
 // Media
 
-video {
-    max-width: 100%;
-    height: auto;
+
+
+.video-container {
+    height: 100%;
+    width: 100%;
+    .parallax & {
+        @include position(fixed, $top: 0);
+    }
+    video {
+        display: flex;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
 }

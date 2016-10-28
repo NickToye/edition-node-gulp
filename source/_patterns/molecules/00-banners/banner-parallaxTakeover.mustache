@@ -2,6 +2,17 @@
 
     <div class="parallax parallax--takeover">
 
+        {{# video }}
+        <div class="video-container">
+            <video width="" height="" controls>
+            	<source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
+            	<source src="http://clips.vorwaerts-gmbh.de/VfE.webm" type="video/webm">
+            	<source src="http://clips.vorwaerts-gmbh.de/VfE.ogv" type="video/ogg">
+            	<img src="" width="2400" height="" alt="Big Buck Bunny" title="No video playback capabilities, please download">
+            </video>
+        </div>
+    {{/ video }}
+
         <div class="c-banner__wrapper{{# sofology-blue-half-bg }} sofology-blue-half-bg {{/ sofology-blue-half-bg }}{{# sofology-red-half-bg }} sofology-red-half-bg {{/ sofology-red-half-bg }}{{# sofology-pale-grey-half-bg }} sofology-pale-grey-half-bg {{/ sofology-pale-grey-half-bg }}{{# sofology-light-grey-half-bg }} sofology-light-grey-half-bg {{/ sofology-light-grey-half-bg }}{{# sofology-medium-grey-half-bg }} sofology-medium-grey-half-bg {{/ sofology-medium-grey-half-bg }}{{# sofology-dark-grey-half-bg }} sofology-dark-grey-half-bg {{/ sofology-dark-grey-half-bg }}{{# sofology-black-half-bg }} sofology-black-half-bg {{/ sofology-black-half-bg }}{{# muted-half }} c-banner--muted-half{{/ muted-half }}{{# muted-20 }} c-banner--muted--20 {{/ muted-20 }}{{# muted-40 }} c-banner--muted--40 {{/ muted-40 }}{{# muted-60 }} c-banner--muted--60 {{/ muted-60 }}{{# muted-80 }} c-banner--muted--80 {{/ muted-80 }}">
 
     	    <div class="c-banner__text{{# text-background }} c-banner__text--bg  {{/ text-background }}{{# sofology-blue-txt-bg }} sofology-blue-txt-bg {{/ sofology-blue-txt-bg }}{{# sofology-red-txt-bg }} sofology-red-txt-bg {{/ sofology-red-txt-bg }}{{# sofology-pale-grey-txt-bg }} sofology-pale-grey-txt-bg {{/ sofology-pale-grey-txt-bg }}{{# sofology-light-grey-txt-bg }} sofology-light-grey-txt-bg {{/ sofology-light-grey-txt-bg }}{{# sofology-medium-grey-txt-bg }} sofology-medium-grey-txt-bg {{/ sofology-medium-grey-txt-bg }}{{# sofology-dark-grey-txt-bg }} sofology-dark-grey-txt-bg {{/ sofology-dark-grey-txt-bg }}{{# sofology-black-txt-bg }} sofology-black-txt-bg {{/ sofology-black-txt-bg }}{{# muted-txt }} c-banner--muted-txt{{/ muted-txt }}{{# muted-20 }} c-banner--muted--20 {{/ muted-20 }}{{# muted-40 }} c-banner--muted--40 {{/ muted-40 }}{{# muted-60 }} c-banner--muted--60 {{/ muted-60 }}{{# muted-80 }} c-banner--muted--80 {{/ muted-80 }}">
@@ -19,5 +30,8 @@
     	</div>
 
     </div>
+
+    {{> molecules-up }}
+    {{> molecules-down }}
 
 </div>
