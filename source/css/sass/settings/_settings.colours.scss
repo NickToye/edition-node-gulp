@@ -12,17 +12,6 @@ $black:																			rgb(0,0,0);
 $white:																			rgb(255,255,255);
 $neutral:																		rgb(237,237,237);
 
-// - Neutral Colours
-$gray: (
-	'darker': lighten($black,13.5%), // #242424
-	'dark': lighten($black,20%), // #333333
-	'mid': lighten($black,33.5%), // #575757
-	'light': lighten($black,60%), // #999999
-	'lighter': lighten($black,86.5%), // #dedede
-	'lightest': rgb(247,247,247), // #f7f7f7
-	'platinum': rgb(229,229,227) // e5e5e3
-);
-
 // - Brand
 
 
@@ -30,15 +19,18 @@ $gray: (
 
 $palettes: (
 	sofology: (
-    	blue: #009FEE,
+    	blue: rgb(0, 159, 238),
     	pink: rgb(222,0,123),
     	yellow: rgb(255,240,0),
     	white: rgb(255,255,255),
-    	pale-grey: #F7F7F7,
-    	light-grey: #E5E5E5,
-    	medium-grey: #3F3F3F,
-    	dark-grey: #202020,
-    	outlet-red: #9F090A,
-    	black: rgb(0,0,0)
+    	pale-grey: rgb(247, 247, 247),
+    	light-grey: rgb(229, 229, 229),
+    	medium-grey: rgb(63, 63, 63),
+    	dark-grey: rgb(32, 32, 32),
+    	outlet-red: rgb(159, 9, 10),
+    	black: rgb(0,0,0),
+    	positive: rgb(223, 240, 216),
+    	caution: rgb(255, 213, 125),
+    	negative: rgb(239, 121, 121)
 	)
 );

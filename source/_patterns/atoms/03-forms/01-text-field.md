@@ -2,4 +2,4 @@
 title: Text Field
 state: inprogress
 ---
-A very basic text field implementation.
+A basic text field element.

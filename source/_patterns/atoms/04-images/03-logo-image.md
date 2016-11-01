@@ -2,4 +2,4 @@
 title: Logo Image
 state: inprogress
 ---
-This is a *Markdown* description of my pattern.
+Company logo, is on a white background so will look strange.  When added to organisms and up it will appear correct.

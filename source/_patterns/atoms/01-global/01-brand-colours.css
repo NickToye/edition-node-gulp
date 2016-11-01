@@ -1,8 +1,109 @@
+// settings/_settings.colours.scss
 $palettes: (
 	sofology: (
-    	blue: $sofology-blue,
-    	pink: $sofology-pink,
-    	yellow: $sofology-yellow,
-    	red: $sofology-red
+    	blue: rgb(0, 159, 238),
+    	pink: rgb(222,0,123),
+    	yellow: rgb(255,240,0),
+    	outlet-red: rgb(159, 9, 10)
 	)
 );
+
+
+// tools/_tools.mixins.scss
+@mixin componentContrast($palette, $contrast:dark, $context:null) {
+    background: palette(sofology,$palette) !important;
+    @if $contrast == "light" {
+        color: palette(sofology,medium-grey) !important;
+        ul li {
+            border-color: palette(sofology, medium-grey) !important;
+        }
+        .btn {
+            background-color: transparent !important;
+            border-color: palette(sofology, medium-grey) !important;
+            color: palette(sofology, mine-shaft) !important;
+            border:1px solid;
+
+            &:hover {
+                background-color: palette(sofology, medium-grey) !important;
+
+                color: palette(sofology, white) !important;
+            }
+        }
+
+        @if $context == "rdp" {
+            small {
+                color: palette(sofology, medium-grey) !important;
+            }
+            figure {
+                figcaption {
+                    color: palette(sofology, medium-grey) !important;
+                }
+                &:hover {
+                    border-color: palette(sofology, medium-grey) !important;
+                    &:before {
+                        background-color: palette(sofology, medium-grey) !important;
+                        color: palette(sofology, white) !important;
+                    }
+                }
+            }
+
+        }
+
+    }
+    @else {
+        color: palette(sofology,white) !important;
+        ul li {
+            border-color: palette(sofology, white) !important;
+        }
+        .btn {
+            background-color: transparent !important;
+            border-color: palette(sofology, white) !important;
+            color: palette(sofology, white) !important;
+            &:hover {
+                background-color: palette(sofology, white) !important;
+                border-color: palette(sofology, white) !important;
+                color: palette(sofology, medium-grey) !important;
+            }
+        }
+        @if $context == "rdp" {
+            small {
+                color: palette(sofology, white) !important;
+            }
+            figure {
+                figcaption {
+                    color: palette(sofology, white) !important;
+                }
+                &:hover {
+                    border-color: palette(sofology, white) !important;
+                    &:before {
+                        background-color: palette(sofology, white) !important;
+                        color: palette(sofology, medium-grey) !important;
+                    }
+                }
+            }
+
+        }
+    }
+    h1,h2,h3,p,ul,li {
+        color: inherit !important;
+    }
+
+}
+
+
+// objects/_objects.colours.scss
+.sofology-blue-bg { @include componentContrast(blue); }
+.sofology-pink-bg { @include componentContrast(pink); }
+.sofology-yellow-bg { @include componentContrast(yellow, light); }
+.sofology-red-bg { @include componentContrast(outlet-red);}
+
+.sofology-blue-txt-bg:after { @include componentContrast(blue); }
+.sofology-pink-txt-bg:after { @include componentContrast(pink); }
+.sofology-yellow-txt-bg:after { @include componentContrast(yellow, light); }
+.sofology-red-txt-bg:after { @include componentContrast(outlet-red); }
+
+.sofology-blue-half-bg:after { @include componentContrast(blue); }
+.sofology-pink-half-bg:after { @include componentContrast(pink); }
+.sofology-yellow-half-bg:after { @include componentContrast(yellow, light); }
+.sofology-red-half-bg:after { @include componentContrast(outlet-red); }
+

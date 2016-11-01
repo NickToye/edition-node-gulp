@@ -25,7 +25,11 @@
       "css": "./public/css"
     }
   },
-  "styleGuideExcludes": [],
+  "styleGuideExcludes": [
+      "organisms",
+      "templates",
+      "pages"
+  ],
   "defaultPattern": "all",
   "defaultShowPatternInfo": false,
   "cleanPublic": true,

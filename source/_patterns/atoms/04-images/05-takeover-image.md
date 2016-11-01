@@ -1,5 +1,5 @@
 ---
-title: Hero Image
+title: Takeover Image
 state: inprogress
 ---
-This is a *Markdown* description of my pattern.
+A takeover image, this will again look correct once in molecules and upwards.

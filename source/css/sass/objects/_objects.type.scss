@@ -9,6 +9,7 @@
 */
 
 // Typography  NB :: Fonts are called through Fort Awesome now
+/*
 @include font-face(FS-Emeric-Thin, '../fonts/FSEmericWeb-Thin');
 @include font-face(FS-Emeric-ExtraLight, '../fonts/FSEmericWeb-ExtraLight');
 @include font-face(FS-Emeric-Light, '../fonts/FSEmericWeb-Light');
@@ -19,41 +20,30 @@
 @include font-face(FS-Emeric-Bold, '../fonts/FSEmericWeb-Bold');
 @include font-face(FS-Emeric-Book, '../fonts/FSEmericWeb-Book');
 @include font-face(FS-Emeric-Core, '../fonts/FSEmeric-Core');
+*/
 
 
 $fs-emeric-thin:																"FS-Emeric-Thin", Helvetica, sans-serif;
-// $fs-emeric-extralight:														"FS-Emeric-ExtraLight", Helvetica, sans-serif;
 $fs-emeric-light:																"FS-Emeric-Light", Helvetica, sans-serif;
 $fs-emeric-medium:																"FS-Emeric-Medium", Helvetica, sans-serif;
 $fs-emeric-regular:																"FS-Emeric-Regular", Helvetica, sans-serif;
-// $fs-emeric-italic:															"FS-Emeric-Italic", Helvetica, sans-serif;
-// $fs-emeric-semibold:															"FS-Emeric-SemiBold", Helvetica, sans-serif;
 $fs-emeric-bold:																"FS-Emeric-Bold", Helvetica, sans-serif;
 $fs-emeric-book:																"FS-Emeric-Book", Helvetica, sans-serif;
 $fs-emeric-core:																"FS-Emeric-Core", Helvetica, sans-serif;
 
-.fs-emeric-thin {font-family: $fs-emeric-thin;}
-// 	.fs-emeric-extralight {font-family: $fs-emeric-extralight;}
-.fs-emeric-light {font-family: $fs-emeric-light;}
-.fs-emeric-regular {font-family: $fs-emeric-regular;}
-.fs-emeric-medium {font-family: $fs-emeric-medium;}
-// 	.fs-emeric-italic {font-family: $fs-emeric-italic;}
-// 	.fs-emeric-semibold {font-family: $fs-emeric-semibold;}
-.fs-emeric-bold {font-family: $fs-emeric-bold;}
-.fs-emeric-book {font-family: $fs-emeric-book;}
-.fs-emeric-core {font-family: $fs-emeric-core;}
+
 
 // Font palette, all the above stuff will be removed
 
 // Font Family
 $typeface: (
-    'sofology-light': fs-emeric-light,
-    'sofology-book': fs-emeric-book,
-    'sofology-medium': fs-emeric-medium,
-    'sofology-regular': fs-emeric-regular,
-    'sofology-core': fs-emeric-core,
-    'sofology-thin': fs-emeric-thin,
-    'sofology-bold': fs-emeric-bold
+    'light': $fs-emeric-light,
+    'book': $fs-emeric-book,
+    'medium': $fs-emeric-medium,
+    'regular': $fs-emeric-regular,
+    'core': $fs-emeric-core,
+    'thin': $fs-emeric-thin,
+    'bold': $fs-emeric-bold
 );
 
 // Function is here because of the cascade chain.
@@ -67,7 +57,8 @@ $type-sizes: (
     h1: (
         fs: rem(36),
         lh: rem(34),
-        typeface: typeface('sofology-light'),
+        typeface: typeface('light'),
+        debug: 'light',
         bp:(
             (
                 breakpoint: 'city',
@@ -84,7 +75,8 @@ $type-sizes: (
     h2: (
         fs: rem(26),
         lh: rem(29),
-        typeface: typeface('sofology-light'),
+        typeface: typeface('light'),
+        debug: 'light',
         bp:(
             (
                 breakpoint: 'city',
@@ -101,7 +93,8 @@ $type-sizes: (
     h3: (
         fs: rem(24),
         lh: rem(23),
-        typeface: typeface('sofology-light'),
+        typeface: typeface('light'),
+        debug: 'light',
         bp:(
             (
                 breakpoint: 'city',
@@ -118,26 +111,30 @@ $type-sizes: (
     h4: (
         fs: rem(32),
         lh: rem(33),
-        typeface: typeface('sofology-book'),
+        typeface: typeface('book'),
+        debug: 'book',
         bp:(
             (
                 breakpoint: 'city',
                 fs: rem(32),
                 lh: rem(31),
-                typeface: typeface('sofology-light')
+                typeface: typeface('light'),
+                debug: 'light'
             ),
             (
                 breakpoint: 'country',
                 fs: rem(20),
                 lh: rem(20),
-                typeface: typeface('sofology-book')
+                typeface: typeface('book'),
+                debug: 'book'
             )
         )
     ),
     h5: (
         fs: rem(14),
         lh: rem(14),
-        typeface: typeface('sofology-book'),
+        typeface: typeface('book'),
+        debug: 'book',
         bp: (
 
         )
@@ -145,7 +142,8 @@ $type-sizes: (
     p: (
         fs: rem(24),
         lh: rem(28),
-        typeface: typeface('sofology-regular'),
+        typeface: typeface('regular'),
+        debug: 'regular',
         bp: (
             (
                 breakpoint: 'city',
@@ -162,7 +160,8 @@ $type-sizes: (
     btn: (
         fs: rem(24),
         lh: rem(28),
-        typeface: typeface('sofology-medium'),
+        typeface: typeface('medium'),
+        debug: 'medium',
         bp: (
             (
                 breakpoint: 'city',
@@ -179,7 +178,8 @@ $type-sizes: (
     input: (
         fs: rem(24),
         lh: rem(28),
-        typeface: typeface('sofology-light'),
+        typeface: typeface('light'),
+        debug: 'light',
         bp: (
             (
                 breakpoint: 'city',
@@ -195,11 +195,20 @@ $type-sizes: (
     )
 );
 
+// Utility classes
+
+.fs-emeric-thin { @include loading(thin); font-family: typeface(thin); }
+.fs-emeric-light { @include loading(light); font-family: typeface(light); }
+.fs-emeric-regular { @include loading(regular); font-family: typeface(regular); }
+.fs-emeric-medium { @include loading(medium); font-family: typeface(medium); }
+.fs-emeric-bold { @include loading(bold); font-family: typeface(bold); }
+.fs-emeric-book { @include loading(book); font-family: typeface(book); }
+.fs-emeric-core { @include loading(core); font-family: typeface(core); }
 
 // Weights
-.light { font-family: typeface(sofology-light); }
-.normal { font-family: typeface(sofology-regular); }
-.medium { font-family: typeface(sofology-medium); }
+.light { font-family: typeface(light); }
+.normal { font-family: typeface(regular); }
+.medium { font-family: typeface(medium); }
 
 strong {
     font-weight: normal;
@@ -210,11 +219,11 @@ strong {
 }
 
 html {
-    font-family: typeface(sofology-regular);
+    font-family: typeface(regular);
 }
 
 body {
-	font-family: typeface(sofology-light);
+	font-family: typeface(light);
 	color: palette(sofology,medium-grey);
 
 }

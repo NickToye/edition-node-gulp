@@ -29,7 +29,8 @@
 
     	    <div class="c-banner__text--inner">
 
-    		    <h1 class="{{# animated }} animated {{/ animated }}  {{# fadeInUp }} fadeInUp {{/ fadeInUp }}">Prices that start low and stay low</h1>
+    		    <h1 class="{{# animated }} animated {{/ animated }}  {{# fadeInUp }} fadeInUp {{/ fadeInUp }}">Prices that start low and stay low </h1>
+    		    <h2 class="{{# animated }} animated {{/ animated }}  {{# fadeInUp }} fadeInUp {{/ fadeInUp }}">This is a sub header</h2>
     		    <p class="{{# animated }} animated {{/ animated }}  {{# fadeInUp }} fadeInUp {{/ fadeInUp }}">We could spend lots of time and effort creating endless sales and promotions. Raising prices to lower them again and misleading you on the real value of your new sofa, but we don't believe in that. Instead we offer the best price we can permanently and spend our time finding great sofa collections that will make you feel right at home instead.</p>
     		    <div class="actions">
         		    {{# cta }}
@@ -50,8 +51,10 @@
 
 	</div>
 
-    {{> molecules-up }}
-    {{> molecules-down }}
+    {{# verticalArrows }}
+        {{> molecules-up }}
+        {{> molecules-down }}
+    {{/ verticalArrows }}
 
 
 </div><!-- end c-block--hero-->

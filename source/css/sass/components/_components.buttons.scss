@@ -27,9 +27,10 @@
   margin:  0; /* [4] */
   cursor: pointer; /* [5] */
   overflow: visible; /* [6] */
-  padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+  padding: 17px 20px;
   transition: $global-transition;
-  border-radius: $global-radius;
+  border-radius: 0;
+  width: auto;
 }
 
 
@@ -39,10 +40,22 @@
 /* Style variants
    ========================================================================== */
 
+.c-btn--soft {
+    border: none;
+    border-radius: 50px;
+}
+
+
+.c-btn--dark-grey {
+    @include componentContrast(dark-grey);
+}
+
+
+
 .c-btn--primary {
 
-  background-color: #4a8ec2;
-
+  background-color: palette(sofology, blue);
+  border: none;
   &,
   &:hover,
   &:active,
@@ -103,12 +116,14 @@
    ========================================================================== */
 
 .c-btn--small {
-  padding: inuit-rem($inuit-global-spacing-unit-tiny) inuit-rem($inuit-global-spacing-unit-small);
+  padding: 4px 17px;
 }
 
+/*
 .c-btn--large {
   padding: inuit-rem($inuit-global-spacing-unit) inuit-rem($inuit-global-spacing-unit-large);
 }
+*/
 
 
 
@@ -124,8 +139,10 @@
 $btn-ghost-border-width: 2px;
 
 .c-btn--ghost {
-  border: $btn-ghost-border-width solid currentColor;
-  padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width) ($inuit-global-spacing-unit - $btn-ghost-border-width);
+  border: $btn-ghost-border-width solid palette(sofology, white);
+  color: palette(sofology, white);
+  text-transform: uppercase;
+//   padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width) ($inuit-global-spacing-unit - $btn-ghost-border-width);
 
   &,
   &:hover,
@@ -134,12 +151,20 @@ $btn-ghost-border-width: 2px;
     background: none;
   }
 
+  &:hover {
+/*
+      background: palette(sofology, black);
+      border-color: palette(sofology, black);
+      color: palette(sofology, white);
+*/
+  }
+
   &.c-btn--small {
-    padding: ($inuit-global-spacing-unit-tiny - $btn-ghost-border-width) ($inuit-global-spacing-unit-small - $btn-ghost-border-width);
+//     padding: ($inuit-global-spacing-unit-tiny - $btn-ghost-border-width) ($inuit-global-spacing-unit-small - $btn-ghost-border-width);
   }
 
   &.c-btn--large {
-    padding: ($inuit-global-spacing-unit - $btn-ghost-border-width) ($inuit-global-spacing-unit-large - $btn-ghost-border-width);
+//     padding: ($inuit-global-spacing-unit - $btn-ghost-border-width) ($inuit-global-spacing-unit-large - $btn-ghost-border-width);
   }
 
   &.c-btn--primary {
@@ -173,3 +198,28 @@ $btn-ghost-border-width: 2px;
   }
 
 }
+
+
+// Buttons
+
+/*
+.c-btn {
+
+    border-width: 2px;
+    border-style: solid;
+	border-radius: 0;
+	padding: 17px 20px;
+	width: auto;
+	&--brand {
+
+		background: transparent;
+		text-transform: uppercase;
+	}
+
+	&--primary {
+    	background: palette(sofology, blue);
+        border: none;
+        text-transform: uppercase;
+	}
+}
+*/

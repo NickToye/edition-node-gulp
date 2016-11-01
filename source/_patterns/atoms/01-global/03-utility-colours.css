@@ -1,0 +1,96 @@
+// settings/_settings.colours.scss
+$palettes: (
+	sofology: (
+    	positive: rgb(223, 240, 216),
+    	caution: rgb(255, 213, 125),
+    	negative: rgb(239, 121, 121)
+	)
+);
+
+
+// tools/_tools.mixins.scss
+@mixin componentContrast($palette, $contrast:dark, $context:null) {
+    background: palette(sofology,$palette) !important;
+    @if $contrast == "light" {
+        color: palette(sofology,medium-grey) !important;
+        ul li {
+            border-color: palette(sofology, medium-grey) !important;
+        }
+        .btn {
+            background-color: transparent !important;
+            border-color: palette(sofology, medium-grey) !important;
+            color: palette(sofology, mine-shaft) !important;
+            border:1px solid;
+
+            &:hover {
+                background-color: palette(sofology, medium-grey) !important;
+
+                color: palette(sofology, white) !important;
+            }
+        }
+
+        @if $context == "rdp" {
+            small {
+                color: palette(sofology, medium-grey) !important;
+            }
+            figure {
+                figcaption {
+                    color: palette(sofology, medium-grey) !important;
+                }
+                &:hover {
+                    border-color: palette(sofology, medium-grey) !important;
+                    &:before {
+                        background-color: palette(sofology, medium-grey) !important;
+                        color: palette(sofology, white) !important;
+                    }
+                }
+            }
+
+        }
+
+    }
+    @else {
+        color: palette(sofology,white) !important;
+        ul li {
+            border-color: palette(sofology, white) !important;
+        }
+        .btn {
+            background-color: transparent !important;
+            border-color: palette(sofology, white) !important;
+            color: palette(sofology, white) !important;
+            &:hover {
+                background-color: palette(sofology, white) !important;
+                border-color: palette(sofology, white) !important;
+                color: palette(sofology, medium-grey) !important;
+            }
+        }
+        @if $context == "rdp" {
+            small {
+                color: palette(sofology, white) !important;
+            }
+            figure {
+                figcaption {
+                    color: palette(sofology, white) !important;
+                }
+                &:hover {
+                    border-color: palette(sofology, white) !important;
+                    &:before {
+                        background-color: palette(sofology, white) !important;
+                        color: palette(sofology, medium-grey) !important;
+                    }
+                }
+            }
+
+        }
+    }
+    h1,h2,h3,p,ul,li {
+        color: inherit !important;
+    }
+
+}
+
+
+// objects/_objects.colours.scss
+.sofology-positive { @include componentContrast(positive, light); }
+.sofology-caution { @include componentContrast(caution, light); }
+.sofology-negative { @include componentContrast(negative); }

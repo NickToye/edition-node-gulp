@@ -164,26 +164,6 @@
 }
 
 
-// @include typesetting(h1);
-
-@mixin typesetting($key){
-   $fontsize: map-get($type-sizes, $key);
-   $resolutions: map-get($fontsize, bp);
-   $typeface: map-get($fontsize, typeface);
-   font-family: $typeface;
-   font-size: map-get($fontsize, fs);
-   line-height: map-get($fontsize, lh);
-
-
-   @each $resolution in $resolutions {
-      @media only screen and (min-width: breakpoint(map-get($resolution, breakpoint)) ) {
-         font-size: map-get($resolution, 'fs');
-         line-height: map-get($resolution, 'lh');
-         font-family: map-get($resolution, 'typeface');
-      }
-   };
-}
-
 
 // TYPOGRAPHY LOADING
 @mixin loading($font) {
@@ -197,6 +177,32 @@
         opacity: 1;
     }
 }
+
+
+
+// @include typesetting(h1);
+
+@mixin typesetting($key){
+    $fontsize: map-get($type-sizes, $key);
+    $resolutions: map-get($fontsize, bp);
+    $typeface: map-get($fontsize, typeface);
+    @include loading(map-get($fontsize, debug));
+    font-family: $typeface;
+    font-size: map-get($fontsize, fs);
+    line-height: map-get($fontsize, lh);
+
+
+   @each $resolution in $resolutions {
+      @media only screen and (min-width: breakpoint(map-get($resolution, breakpoint)) ) {
+         font-size: map-get($resolution, 'fs');
+         line-height: map-get($resolution, 'lh');
+         font-family: map-get($resolution, 'typeface');
+      }
+   };
+}
+
+
+
 
 
 // LINKS
@@ -334,8 +340,6 @@
     h1,h2,h3,p,ul,li {
         color: inherit !important;
     }
-
-
 
 }
 

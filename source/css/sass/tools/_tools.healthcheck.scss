@@ -2,11 +2,13 @@
  * Outline all classes.
  */
 
+
+
 @if (inuit-config(healthcheck) == true) {
 
 
         [class] {
-          outline: 1px dashed lightgrey;
+          outline: 1px dashed rgba(palette(sofology,dark-grey),.1);
         }
 
         /**
@@ -36,7 +38,7 @@
          */
         [class^="c-"],
         [class*=" c-"] {
-          outline: 1px dashed cyan;
+          outline: 1px dashed rgba(palette(sofology,white),.5);
         }
 
         /**
@@ -53,5 +55,49 @@
           outline: 1px dashed red;
         }
 
+        /**
+        * Fort Awesome classes.
+        */
+        html[class*="loading"] {
+            div[class^="fs-emeric"] {
+                position: relative;
+                &:after {
+                    @include position($top: 0, $right: 20px);
+                    color: palette(sofology, blue);
+                    content: '\f009';
+                    display: block;
+                    font-family: sofology;
+                }
+            }
+        }
+
+        html[class*="ready"] {
+            div[class^="fs-emeric"] {
+                position: relative;
+                &:after {
+                    @include position($top: 0, $right: 20px);
+                    color: palette(sofology, positive);
+                    content: '\f045';
+                    display: block;
+                    font-family: sofology;
+                }
+            }
+        }
+
+        html[class*="failed"] {
+            div[class^="fs-emeric"] {
+                position: relative;
+                &:after {
+                    @include position($top: 0, $right: 20px);
+                    color: palette(sofology, negative);
+                    content: '\f05b';
+                    display: block;
+                    font-family: sofology;
+                }
+            }
+        }
+
 
 }
+
+

@@ -21,27 +21,7 @@ input, textarea, button {
 }
 
 
-// Buttons
 
-.c-btn {
-
-    border-width: 2px;
-    border-style: solid;
-	border-radius: 0;
-	padding: 17px 20px;
-	width: auto;
-	&--brand {
-
-		background: transparent;
-		text-transform: uppercase;
-	}
-
-	&--primary {
-    	background: palette(sofology, blue);
-        border: none;
-        text-transform: uppercase;
-	}
-}
 
 
 // Hero Blocks
@@ -343,6 +323,8 @@ input, textarea, button {
             background: none;
             border: none;
             font-size: rem(48);
+            left: 50%;
+            transform: translateX(-50%);
             &.fa-angle-down {
                 @include position(absolute, $bottom: 20px);
             }
@@ -384,21 +366,28 @@ input, textarea, button {
 form.c-form {
     max-width: 400px;
 
+
+
     &--inline {
 
         .c-controls {
             display: flex;
-
             &__control {
-                @include typesetting(input);
                 border: none;
-                color: palette(sofology, medium-grey);
-                padding: 19px 25px;
             }
+
         }
     }
 
 
+}
+
+.c-controls {
+    &__control {
+        @include typesetting(input);
+        color: palette(sofology, medium-grey);
+        padding: 19px 25px;
+    }
 }
 
 // Media
@@ -422,7 +411,7 @@ form.c-form {
 
 .actions {
     display: flex;
-//     justify-content: space-between;
+//     justify-content: space-around;
     button {
         margin-right: 20px;
     }
@@ -437,3 +426,6 @@ form.c-form {
     max-height: 90%;
     transform: translate(-50%, -50%);
 }
+
+
+

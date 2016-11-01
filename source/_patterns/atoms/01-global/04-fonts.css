@@ -1,0 +1,40 @@
+@mixin loading($font) {
+    html.fa-events-typefaces-fs-emeric-#{$font}-loading & {
+        opacity: 0;
+    }
+    html.fa-events-typefaces-fs-emeric-#{$font}-ready & {
+        opacity: 1;
+    }
+    html.fa-events-typefaces-fs-emeric-#{$font}-failed & {
+        opacity: 1;
+    }
+}
+
+
+// objects/_objects.type.scss
+
+// Font Family
+$typeface: (
+    'light': $fs-emeric-light,
+    'book': $fs-emeric-book,
+    'medium': $fs-emeric-medium,
+    'regular': $fs-emeric-regular,
+    'core': $fs-emeric-core,
+    'thin': $fs-emeric-thin,
+    'bold': $fs-emeric-bold
+);
+
+// Function is here because of the cascade chain.
+@function typeface($key: 'fs-emeric-light') {
+    @return map-get($typeface, $key);
+}
+
+.fs-emeric-thin { @include loading(thin); font-family: typeface(thin); }
+.fs-emeric-light { @include loading(light); font-family: typeface(light); }
+.fs-emeric-regular { @include loading(regular); font-family: typeface(regular); }
+.fs-emeric-medium { @include loading(medium); font-family: typeface(medium); }
+.fs-emeric-bold { @include loading(bold); font-family: typeface(bold); }
+.fs-emeric-book { @include loading(book); font-family: typeface(book); }
+.fs-emeric-core { @include loading(core); font-family: typeface(core); }
+
+// tools/_tools.mixins.scss

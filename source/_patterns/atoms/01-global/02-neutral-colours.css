@@ -1,10 +1,116 @@
+// settings/_settings.colours.scss
 $palettes: (
-	neutral: (
-    	white: $sofology-white,
-    	pale-grey: $sofology-pale-grey,
-    	light-grey: $sofology-light-grey,
-    	medium-grey: $sofology-medium-grey,
-    	dark-grey: $sofology-dark-grey,
-    	black: $sofology-black
+	sofology: (
+    	white: rgb(255,255,255),
+    	pale-grey: rgb(247, 247, 247),
+    	light-grey: rgb(229, 229, 229),
+    	medium-grey: rgb(63, 63, 63),
+    	dark-grey: rgb(32, 32, 32),
+    	black: rgb(0,0,0)
 	)
 );
+
+
+// tools/_tools.mixins.scss
+@mixin componentContrast($palette, $contrast:dark, $context:null) {
+    background: palette(sofology,$palette) !important;
+    @if $contrast == "light" {
+        color: palette(sofology,medium-grey) !important;
+        ul li {
+            border-color: palette(sofology, medium-grey) !important;
+        }
+        .btn {
+            background-color: transparent !important;
+            border-color: palette(sofology, medium-grey) !important;
+            color: palette(sofology, mine-shaft) !important;
+            border:1px solid;
+
+            &:hover {
+                background-color: palette(sofology, medium-grey) !important;
+
+                color: palette(sofology, white) !important;
+            }
+        }
+
+        @if $context == "rdp" {
+            small {
+                color: palette(sofology, medium-grey) !important;
+            }
+            figure {
+                figcaption {
+                    color: palette(sofology, medium-grey) !important;
+                }
+                &:hover {
+                    border-color: palette(sofology, medium-grey) !important;
+                    &:before {
+                        background-color: palette(sofology, medium-grey) !important;
+                        color: palette(sofology, white) !important;
+                    }
+                }
+            }
+
+        }
+
+    }
+    @else {
+        color: palette(sofology,white) !important;
+        ul li {
+            border-color: palette(sofology, white) !important;
+        }
+        .btn {
+            background-color: transparent !important;
+            border-color: palette(sofology, white) !important;
+            color: palette(sofology, white) !important;
+            &:hover {
+                background-color: palette(sofology, white) !important;
+                border-color: palette(sofology, white) !important;
+                color: palette(sofology, medium-grey) !important;
+            }
+        }
+        @if $context == "rdp" {
+            small {
+                color: palette(sofology, white) !important;
+            }
+            figure {
+                figcaption {
+                    color: palette(sofology, white) !important;
+                }
+                &:hover {
+                    border-color: palette(sofology, white) !important;
+                    &:before {
+                        background-color: palette(sofology, white) !important;
+                        color: palette(sofology, medium-grey) !important;
+                    }
+                }
+            }
+
+        }
+    }
+    h1,h2,h3,p,ul,li {
+        color: inherit !important;
+    }
+
+}
+
+
+// objects/_objects.colours.scss
+.sofology-white-bg { @include componentContrast(white,light); }
+.sofology-pale-grey-bg { @include componentContrast(pale-grey,light); }
+.sofology-light-grey-bg { @include componentContrast(light-grey,light); }
+.sofology-medium-grey-bg { @include componentContrast(medium-grey); }
+.sofology-dark-grey-bg { @include componentContrast(dark-grey); }
+.sofology-black-bg { @include componentContrast(black); }
+
+.sofology-white-txt-bg:after { @include componentContrast(white,light); }
+.sofology-pale-grey-txt-bg:after { @include componentContrast(pale-grey,light); }
+.sofology-light-grey-txt-bg:after { @include componentContrast(light-grey,light); }
+.sofology-medium-grey-txt-bg:after { @include componentContrast(medium-grey); }
+.sofology-dark-grey-txt-bg:after { @include componentContrast(dark-grey); }
+.sofology-black-txt-bg:after { @include componentContrast(black); }
+
+.sofology-white-half-bg:after { @include componentContrast(white,light); }
+.sofology-pale-grey-half-bg:after { @include componentContrast(pale-grey,light); }
+.sofology-light-grey-half-bg:after { @include componentContrast(light-grey,light); }
+.sofology-medium-grey-half-bg:after { @include componentContrast(medium-grey); }
+.sofology-dark-grey-half-bg:after { @include componentContrast(dark-grey); }
+.sofology-black-half-bg:after { @include componentContrast(black); }

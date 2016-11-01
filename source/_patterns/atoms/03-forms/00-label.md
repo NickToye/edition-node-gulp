@@ -1,5 +1,5 @@
 ---
 title: Label
-state: complete
+state: inprogress
 ---
-A very basic label implementation.
+A basic label element.
