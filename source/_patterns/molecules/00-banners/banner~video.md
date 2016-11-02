@@ -1,6 +1,6 @@
 ---
 title: Banner Video
-state: inprogress
+state: complete
 
 ---
 Basic centered banner text with a video background.

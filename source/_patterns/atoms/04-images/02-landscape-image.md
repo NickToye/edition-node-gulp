@@ -1,5 +1,5 @@
 ---
 title: Landscape Image
-state: inprogress
+state: complete
 ---
 A landscape image element.

@@ -1,50 +1,7 @@
 @import "sass/global";
 
 
-// To put into reset
 
-
-
-
-
-
-
-// Hero Blocks
-
-
-
-
-
-// Forms
-
-
-
-// Media
-
-
-
-.video-container {
-    height: 100%;
-    width: 100%;
-    .parallax & {
-        @include position(fixed, $top: 0);
-    }
-    video {
-        display: flex;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-
-.actions {
-    display: flex;
-    justify-content: space-around;
-    button {
-        margin-right: 20px;
-    }
-}
 
 
 

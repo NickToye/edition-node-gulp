@@ -1,6 +1,6 @@
 ---
 title: Banner H Align Left 
-state: inprogress
+state: complete
 
 ---
 Banner with left alignment, background text applied.

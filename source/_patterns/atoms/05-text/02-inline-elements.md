@@ -1,5 +1,5 @@
 ---
 title: Inline Elements
-state: inprogress
+state: complete
 ---
-This is a *Markdown* description of my pattern.
+A collection of inline elements.

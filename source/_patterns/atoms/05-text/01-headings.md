@@ -1,5 +1,5 @@
 ---
 title: Headings
-state: inprogress
+state: complete
 ---
-This is a *Markdown* description of my pattern.
+Header sizes, we are using mixins, maps and functions to generate responsive type.

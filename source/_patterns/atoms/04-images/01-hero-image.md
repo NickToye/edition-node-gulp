@@ -1,5 +1,5 @@
 ---
 title: Hero Image
-state: inprogress
+state: complete
 ---
 A basic hero image element.

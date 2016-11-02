@@ -1,0 +1,22 @@
+// objects/_objects.banners.scss
+
+.c-banner {
+    // banner code
+
+    &--takeover {
+        height: 100vh;
+        overflow: hidden;
+        padding: 0;
+        img {
+            @include size(100%);
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+    }
+
+    &__wrapper {
+        .c-banner--takeover & {
+		    position: absolute;
+	    }
+    }
+}

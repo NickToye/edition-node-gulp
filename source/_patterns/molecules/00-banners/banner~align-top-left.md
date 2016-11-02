@@ -1,6 +1,6 @@
 ---
 title: Banner Align Top Left 
-state: inprogress
+state: complete
 
 ---
 Banner with top left alignment, background text applied.

@@ -22,8 +22,11 @@
 
     }
 
-    &--takeover {
+    &--h-align-right {
 
+    }
+
+    &--takeover {
         height: 100vh;
         overflow: hidden;
         padding: 0;
@@ -44,7 +47,6 @@
         align-items: center;
         background-image: url('http://placeimg.com/1572/1118/nature');
         height: 1000px;
-
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -55,22 +57,13 @@
         }
     }
 
-    // TEST THIS
-    &--half-left {
-        background: none;
-    }
 
     &--muted {
 
 	    &:after {
+    	    @include position($top: 0, $left: 0, $right: 0, $bottom: 0);
 		    content: '';
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		    right: 0;
-		    bottom: 0;
 		    background-color: inherit;
-// 			    opacity: .6;
 		    z-index: 1;
 	    }
 
@@ -86,7 +79,7 @@
 	    &--80:after {
 		    opacity: .8;
 	    }
-	    
+
 
 
     }
@@ -118,9 +111,6 @@
 	    &--80:after {
 		    opacity: .8;
 	    }
-
-
-
 
     }
 
@@ -162,7 +152,6 @@
     // Vertical Align the banner container
     &--v-align-top {
         justify-content: flex-start;
-
     }
 
     &--v-align-bottom {
@@ -268,6 +257,9 @@
 		    align-self: flex-start;
 		    height: 100%;
 		    text-align: left;
+		    .actions {
+    		    justify-content: flex-start;
+		    }
 	    }
 
 	    .c-banner--half-right & {
@@ -285,10 +277,8 @@
 	    width: 78%;
 	    align-self: center;
 	    flex-direction: column;
-//         color: inherit;
 
 		&--bg {
-// 			background-color: inherit;
 			padding: 25px;
 		}
 
@@ -296,8 +286,6 @@
 			position: relative;
 			z-index: 2;
 		}
-
-
 
     }
 
@@ -307,10 +295,10 @@
 	        &.fa-angle-up {
 	            opacity: 0;
 	        }
-	
+
 	    }
 	}
-	
+
 	&:last-of-type {
 	    .c-btn--direction {
 	        &.fa-angle-down {

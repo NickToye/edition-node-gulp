@@ -1,6 +1,6 @@
 ---
 title: Banner Takeover
-state: inprogress
+state: complete
 
 ---
 Takeover banner.

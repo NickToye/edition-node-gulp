@@ -1,6 +1,6 @@
 ---
 title: Banner V Align Top
-state: inprogress
+state: complete
 
 ---
 Basic banner with a vertical top alignment.

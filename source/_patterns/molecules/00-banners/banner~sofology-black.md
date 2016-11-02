@@ -1,6 +1,6 @@
 ---
 title: Banner Sofology Black
-state: inprogress
+state: complete
 
 ---
 Banner with a solid background colour using the Sofology Black.

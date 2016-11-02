@@ -1,0 +1,27 @@
+// components/_components.banner.scss
+
+.c-banner {
+	background: #3F3F3F;
+	color: palette(sofology, white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 530px;
+    padding: 35px 0;
+    position: relative;
+    z-index: 2;
+
+    &__wrapper {
+        .c-banner--half-left & {
+    	    background: inherit;
+		    width: 50%;
+		    align-self: flex-start;
+		    height: 100%;
+		    text-align: left;
+		    .actions {
+    		    justify-content: flex-start;
+		    }
+	    }
+    }
+}
+
