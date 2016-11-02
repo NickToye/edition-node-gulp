@@ -11,14 +11,24 @@ html {
   line-height: 1.15; /* 2 */
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
+  -webkit-font-smoothing: antialiased;
 }
 
 /**
- * Remove the margin in all browsers (opinionated).
+ * Remove the margin in all browsers (opinionated).  Also apply flexbox right
+   from the start.
  */
 
 body {
-  margin: 0;
+	@include flexbox();
+	min-height: 100vh;
+	margin: 0;
+}
+
+* {
+	&:focus {
+		outline: none;
+	}
 }
 
 /* HTML5 display definitions
@@ -263,6 +273,10 @@ select,
 textarea {
   font: inherit; /* 1 */
   margin: 0; /* 2 */
+}
+
+input, textarea, button {
+	width: 100%;
 }
 
 /**

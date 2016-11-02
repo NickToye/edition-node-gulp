@@ -2,7 +2,7 @@
     "text-background": true,
     "image": true,
     "sofology-dark-grey-txt-bg": true,
-    "muted-txt": true,
+    "muted-txt": false,
     "muted-80": true,
     "v-align-bottom": true,
     "h-align-right": true

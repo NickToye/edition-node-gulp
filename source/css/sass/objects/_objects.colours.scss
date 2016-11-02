@@ -15,15 +15,15 @@
 .sofology-yellow-bg { @include componentContrast(yellow, light); }
 .sofology-red-bg { @include componentContrast(outlet-red);}
 
-.sofology-blue-txt-bg:after { @include componentContrast(blue); }
-.sofology-pink-txt-bg:after { @include componentContrast(pink); }
-.sofology-yellow-txt-bg:after { @include componentContrast(yellow, light); }
-.sofology-red-txt-bg:after { @include componentContrast(outlet-red); }
+.sofology-blue-txt-bg { @include componentContrast(blue, $after: true); }
+.sofology-pink-txt-bg { @include componentContrast(pink, $after: true); }
+.sofology-yellow-txt-bg { @include componentContrast(yellow, light, $after: true); }
+.sofology-red-txt-bg { @include componentContrast(outlet-red, $after: true); }
 
-.sofology-blue-half-bg:after { @include componentContrast(blue); }
-.sofology-pink-half-bg:after { @include componentContrast(pink); }
-.sofology-yellow-half-bg:after { @include componentContrast(yellow, light); }
-.sofology-red-half-bg:after { @include componentContrast(outlet-red); }
+.sofology-blue-half-bg { @include componentContrast(blue, $after: true); }
+.sofology-pink-half-bg { @include componentContrast(pink, $after: true); }
+.sofology-yellow-half-bg { @include componentContrast(yellow, light, $after: true); }
+.sofology-red-half-bg { @include componentContrast(outlet-red, $after: true); }
 
 
 // Neutral Colours
@@ -35,19 +35,19 @@
 .sofology-dark-grey-bg { @include componentContrast(dark-grey); }
 .sofology-black-bg { @include componentContrast(black); }
 
-.sofology-white-txt-bg:after { @include componentContrast(white,light); }
-.sofology-pale-grey-txt-bg:after { @include componentContrast(pale-grey,light); }
-.sofology-light-grey-txt-bg:after { @include componentContrast(light-grey,light); }
-.sofology-medium-grey-txt-bg:after { @include componentContrast(medium-grey); }
-.sofology-dark-grey-txt-bg:after { @include componentContrast(dark-grey); }
-.sofology-black-txt-bg:after { @include componentContrast(black); }
+.sofology-white-txt-bg { @include componentContrast(white,light, $after: true); }
+.sofology-pale-grey-txt-bg { @include componentContrast(pale-grey,light, $after: true); }
+.sofology-light-grey-txt-bg { @include componentContrast(light-grey,light, $after: true); }
+.sofology-medium-grey-txt-bg { @include componentContrast(medium-grey, $after: true); }
+.sofology-dark-grey-txt-bg { @include componentContrast(dark-grey, $after: true); }
+.sofology-black-txt-bg { @include componentContrast(black, $after: true); }
 
-.sofology-white-half-bg:after { @include componentContrast(white,light); }
-.sofology-pale-grey-half-bg:after { @include componentContrast(pale-grey,light); }
-.sofology-light-grey-half-bg:after { @include componentContrast(light-grey,light); }
-.sofology-medium-grey-half-bg:after { @include componentContrast(medium-grey); }
-.sofology-dark-grey-half-bg:after { @include componentContrast(dark-grey); }
-.sofology-black-half-bg:after { @include componentContrast(black); }
+.sofology-white-half-bg { @include componentContrast(white,light, $after: true); }
+.sofology-pale-grey-half-bg { @include componentContrast(pale-grey,light, $after: true); }
+.sofology-light-grey-half-bg { @include componentContrast(light-grey,light, $after: true); }
+.sofology-medium-grey-half-bg { @include componentContrast(medium-grey, $after: true); }
+.sofology-dark-grey-half-bg { @include componentContrast(dark-grey, $after: true); }
+.sofology-black-half-bg { @include componentContrast(black, $after: true); }
 
 
 // Utility Colours

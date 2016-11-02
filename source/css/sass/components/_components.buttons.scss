@@ -19,10 +19,11 @@
 
 .c-btn {
   @include typesetting(btn);
+  border-style: solid;
   font-size: 12px;
   display: inline-block; /* [1] */
   vertical-align: middle; /* [2] */
-
+  font: inherit;
   text-align: center; /* [4] */
   margin:  0; /* [4] */
   cursor: pointer; /* [5] */
@@ -33,7 +34,7 @@
   width: auto;
 }
 
-
+$border-width: 2px;
 
 
 
@@ -45,69 +46,30 @@
     border-radius: 50px;
 }
 
+.c-btn--blue {
+	@include componentButtons(blue);
+	
+}
+
+.c-btn--yellow {
+	@include componentButtons(yellow, light);
+}
+
+.c-btn--pink {
+	@include componentButtons(pink);
+}
+
+.c-btn--red {
+	@include componentButtons(outlet-red);
+}
 
 .c-btn--dark-grey {
-    @include componentContrast(dark-grey);
+    @include componentButtons(dark-grey);
 }
 
-
-
-.c-btn--primary {
-
-  background-color: palette(sofology, blue);
-  border: none;
-  &,
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none; /* [4] */
-    color: #fff;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: #3774a2;
-  }
-
+.c-btn--black {
+	@include componentButtons(black);
 }
-
-.c-btn--secondary {
-  background-color: #2f4054;
-
-  &,
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
-    color: #fff;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: #1d2733;
-  }
-
-}
-
-.c-btn--tertiary {
-  background-color: #fff;
-  color: #4a8ec2;
-
-  &,
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
-    color: #4a8ec2;
-  }
-
-  &:hover,
-  &:focus {
-    color: #3774a2;
-  }
-
-}
-
 
 
 
@@ -139,11 +101,9 @@
 $btn-ghost-border-width: 2px;
 
 .c-btn--ghost {
-  border: $btn-ghost-border-width solid palette(sofology, white);
-  color: palette(sofology, white);
+  color: white;
+  border: $btn-ghost-border-width solid currentColor;
   text-transform: uppercase;
-//   padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width) ($inuit-global-spacing-unit - $btn-ghost-border-width);
-
   &,
   &:hover,
   &:active,
@@ -152,11 +112,9 @@ $btn-ghost-border-width: 2px;
   }
 
   &:hover {
-/*
-      background: palette(sofology, black);
-      border-color: palette(sofology, black);
-      color: palette(sofology, white);
-*/
+  	background-color: palette(sofology, white);
+  	border-color: palette(sofology, white);
+  	color: palette(sofology, dark-grey);
   }
 
   &.c-btn--small {
@@ -198,6 +156,31 @@ $btn-ghost-border-width: 2px;
   }
 
 }
+
+
+
+
+
+/* Directional buttons
+   =========================================================================== */
+   
+.c-btn {
+    &--direction {
+        background: none;
+        border: none;
+        font-size: rem(48);
+        left: 50%;
+        transform: translateX(-50%);
+        &.fa-angle-down {
+            @include position(absolute, $bottom: 20px);
+        }
+        &.fa-angle-up {
+            @include position(absolute, $top: 20px);
+        }
+    }
+}
+
+
 
 
 // Buttons

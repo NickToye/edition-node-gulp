@@ -1,0 +1,15 @@
+// objects/_objects.type.scss
+
+a {
+	color: palette(sofology,blue);
+	cursor: pointer;
+	text-decoration: none;
+	transition: all .3s linear;
+	&:hover {
+		color: darken(palette(sofology,blue),15%);
+		text-decoration: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}

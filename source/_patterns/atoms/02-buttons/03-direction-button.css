@@ -1,0 +1,39 @@
+// components/_components.buttons.scss
+
+.c-btn {
+    &--direction {
+        background: none;
+        border: none;
+        font-size: rem(48);
+        left: 50%;
+        transform: translateX(-50%);
+        &.fa-angle-down {
+            @include position(absolute, $bottom: 20px);
+        }
+        &.fa-angle-up {
+            @include position(absolute, $top: 20px);
+        }
+    }
+}
+
+// components/_components.banners.scss
+
+.c-banner {
+	&:first-of-type {
+	    .c-btn--direction {
+	        &.fa-angle-up {
+	            opacity: 0;
+	        }
+	
+	    }
+	}
+	
+	&:last-of-type {
+	    .c-btn--direction {
+	        &.fa-angle-down {
+	            opacity: 0;
+	        }
+	    }
+	}
+}
+	

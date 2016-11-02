@@ -263,18 +263,34 @@
 
 /// Specific mixin, used to display a text colour and background
 
-@mixin componentContrast($palette, $contrast:dark, $context:null) {
+@mixin componentContrast($palette, $contrast:dark, $context:null, $after:false) {
     background: palette(sofology,$palette) !important;
+
+    
+	@if $after == true {
+	        background: none !important;
+	        position: relative;
+	        &:after {
+		        background: palette(sofology,$palette) !important;
+			    content: '';
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			    bottom: 0;
+		    }
+        }
+    
     @if $contrast == "light" {
         color: palette(sofology,medium-grey) !important;
         ul li {
             border-color: palette(sofology, medium-grey) !important;
         }
-        .btn {
+       /*
+ .c-btn {
             background-color: transparent !important;
             border-color: palette(sofology, medium-grey) !important;
             color: palette(sofology, mine-shaft) !important;
-            border:1px solid;
 
             &:hover {
                 background-color: palette(sofology, medium-grey) !important;
@@ -282,6 +298,12 @@
                 color: palette(sofology, white) !important;
             }
         }
+        
+        .c-btn--#{$palette} {
+	        border-color: palette(sofology, $palette) !important;
+        }
+*/
+        
 
         @if $context == "rdp" {
             small {
@@ -301,23 +323,33 @@
             }
 
         }
+        
+        h1,h2,h3,p,ul,li {
+	        color: inherit !important;
+	    }
 
     }
     @else {
+	    
         color: palette(sofology,white) !important;
         ul li {
             border-color: palette(sofology, white) !important;
         }
-        .btn {
-            background-color: transparent !important;
-            border-color: palette(sofology, white) !important;
+        /*
+.c-btn {
+            background-color: transparent;
+            border-color: inherit;
             color: palette(sofology, white) !important;
+            
             &:hover {
                 background-color: palette(sofology, white) !important;
                 border-color: palette(sofology, white) !important;
                 color: palette(sofology, medium-grey) !important;
             }
         }
+*/
+        
+        
         @if $context == "rdp" {
             small {
                 color: palette(sofology, white) !important;
@@ -337,13 +369,23 @@
 
         }
     }
-    h1,h2,h3,p,ul,li {
-        color: inherit !important;
-    }
+    
 
 }
 
 @mixin componentButtons($palette, $contrast:dark) {
+	
+	background-color: palette(sofology, $palette);
+	border-color: palette(sofology, $palette);
+	color: palette(sofology, white);
+	&:hover {
+		background-color: darken(palette(sofology, $palette),10%);
+		border-color: darken(palette(sofology, $palette),10%);
+	}
+	
+	@if $contrast == "light" {
+		color: palette(sofology, dark-grey);
+	}
 
     button i.fa {
         color: palette(sofology,$palette) !important;

@@ -1,5 +1,5 @@
 ---
 title: Text Button
-state: inreview
+state: complete
 ---
-A very basic text button.
+A very basic text button.  The class ```c-btn--text``` is not actually used as standard, but can be if required.
