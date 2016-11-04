@@ -1,0 +1,27 @@
+// objects/_objects.media.scss
+
+.o-media--tile {
+    max-width: 600px;
+    position: relative;
+
+    > .o-media__caption {
+        @include position($bottom: $inuit-global-spacing-unit, $left: 0);
+        text-align: center;
+        width: 100%;
+
+        > * {
+            margin: 0;
+        }
+    }
+}
+
+// utilities/_utilities.contrasts.scss
+
+.u-contrast {
+    &--light {
+        color: palette(sofology, dark-grey);
+    }
+    &--dark {
+        color: palette(sofology, white);
+    }
+}

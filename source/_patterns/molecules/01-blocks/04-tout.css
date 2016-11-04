@@ -1,0 +1,23 @@
+// objects/_objects.media.scss
+
+.o-media--tout {
+    position: relative;
+
+    .c-banner__wrapper {
+        padding: 0 !important;
+        width: 100%;
+    }
+
+    .c-banner__text {
+        padding: $inuit-global-spacing-unit;
+        width: 100%;
+    }
+
+    .c-banner__text--inner {
+
+        > * {
+            margin: 0;
+        }
+    }
+
+}

@@ -1,5 +1,5 @@
 ---
 title: Brand Button
-state: inprogress
+state: complete
 ---
 Call to action button.

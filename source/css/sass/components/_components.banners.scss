@@ -18,6 +18,10 @@
 	    padding: 0;
     }
 
+    &--square {
+        max-width: 600px;
+    }
+
     &--h-align-left {
 
     }
@@ -285,6 +289,10 @@
 		&--inner {
 			position: relative;
 			z-index: 2;
+		}
+
+		&--inner > *:last-child {
+    		margin: 0;
 		}
 
     }

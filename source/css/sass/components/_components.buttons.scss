@@ -48,7 +48,7 @@ $border-width: 2px;
 
 .c-btn--blue {
 	@include componentButtons(blue);
-	
+
 }
 
 .c-btn--yellow {
@@ -163,11 +163,12 @@ $btn-ghost-border-width: 2px;
 
 /* Directional buttons
    =========================================================================== */
-   
+
 .c-btn {
     &--direction {
         background: none;
         border: none;
+        color: inherit;
         font-size: rem(48);
         left: 50%;
         transform: translateX(-50%);

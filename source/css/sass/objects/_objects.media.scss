@@ -152,6 +152,58 @@
 }
 
 
+
+
+
+/* Media Tiles
+   ========================================================================== */
+
+.o-media--tile {
+    max-width: 600px;
+    position: relative;
+
+    > .o-media__caption {
+        @include position($bottom: $inuit-global-spacing-unit, $left: 0);
+        text-align: center;
+        width: 100%;
+
+        > * {
+            margin: 0;
+        }
+    }
+}
+
+
+
+
+
+/* Media Tout
+   ========================================================================== */
+
+.o-media--tout {
+    position: relative;
+
+    .c-banner__wrapper {
+        padding: 0 !important;
+        width: 100%;
+    }
+
+    .c-banner__text {
+        padding: $inuit-global-spacing-unit;
+        width: 100%;
+    }
+
+    .c-banner__text--inner {
+
+        > * {
+            margin: 0;
+        }
+    }
+
+}
+
+
+
 /* Video
    ========================================================================== */
 

@@ -1,0 +1,28 @@
+/* ==========================================================================
+   #ALERTS
+   ========================================================================== */
+
+.alert {
+    padding: $inuit-global-spacing-unit/2;
+    text-align: center;
+
+    > *:last-child {
+        margin: 0;
+    }
+
+    &--error {
+        @extend .sofology-negative;
+    }
+
+    &--warning {
+        @extend .sofology-caution;
+    }
+
+    &--success {
+        @extend .sofology-positive;
+    }
+
+    &--info {
+        @extend .sofology-info;
+    }
+}

@@ -1,0 +1,9 @@
+// components/_components.alerts.scss
+
+.alert {
+    // alert code
+
+    &--success {
+        @extend .sofology-positive;
+    }
+}

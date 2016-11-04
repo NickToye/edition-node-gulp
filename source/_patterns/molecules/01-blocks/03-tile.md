@@ -1,5 +1,7 @@
 ---
 title: Tile
-state: inprogress
+state: complete
 ---
-This is a *Markdown* description of my pattern.
+A simple tile object with caption.
+
+Also have a utility class to change the contrast colour from dark to light.

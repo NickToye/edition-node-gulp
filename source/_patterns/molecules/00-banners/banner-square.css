@@ -1,0 +1,9 @@
+// components/_components.banners.scss
+
+.c-banner {
+    // banner code
+
+    &--square {
+        max-width: 600px;
+    }
+}

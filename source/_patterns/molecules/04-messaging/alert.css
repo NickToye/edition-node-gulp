@@ -1,0 +1,10 @@
+// components/_components.alerts.scss
+
+.alert {
+    padding: $inuit-global-spacing-unit/2; // 35px / 2
+    text-align: center;
+
+    > *:last-child {
+        margin: 0;
+    }
+}

@@ -55,3 +55,4 @@
 .sofology-positive { @include componentContrast(positive, light); }
 .sofology-caution { @include componentContrast(caution, light); }
 .sofology-negative { @include componentContrast(negative); }
+.sofology-info { @include componentContrast(info, light); }

@@ -3,7 +3,8 @@ $palettes: (
 	sofology: (
     	positive: rgb(223, 240, 216),
     	caution: rgb(255, 213, 125),
-    	negative: rgb(239, 121, 121)
+    	negative: rgb(239, 121, 121),
+    	info: rgb(211, 233, 246)
 	)
 );
 
@@ -94,3 +95,4 @@ $palettes: (
 .sofology-positive { @include componentContrast(positive, light); }
 .sofology-caution { @include componentContrast(caution, light); }
 .sofology-negative { @include componentContrast(negative); }
+.sofology-info { @include componentContrast(info, light); }
