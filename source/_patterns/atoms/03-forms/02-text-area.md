@@ -1,5 +1,5 @@
 ---
 title: Text Area
-state: inprogress
+state: complete
 ---
 A basic text area element.
