@@ -1,0 +1,56 @@
+// objects/_objects.colours.scss
+
+.c-banner {
+    // banner code
+
+    &__text {
+	    width: 78%;
+	    align-self: center;
+	    flex-direction: column;
+
+		&--bg {
+			padding: 25px;
+		}
+
+		&--inner {
+			position: relative;
+			z-index: 2;
+		}
+
+    }
+
+    &--muted-txt {
+
+        position: relative;
+
+	    &:after {
+		    content: '';
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    background-color: inherit;
+		    z-index: 1;
+	    }
+
+	    &--20:after {
+		    opacity: .2;
+	    }
+	    &--40:after {
+		    opacity: .4;
+	    }
+	    &--60:after {
+		    opacity: .6;
+	    }
+	    &--80:after {
+		    opacity: .8;
+	    }
+
+    }
+
+}
+
+
+
+

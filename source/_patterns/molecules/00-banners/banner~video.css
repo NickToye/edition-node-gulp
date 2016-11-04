@@ -1,0 +1,25 @@
+// objects/_objects.banners.scss
+
+.c-banner {
+    // banner code
+    &--video {
+        padding: 0;
+    }
+}
+
+
+// objects/_objects.media.scss
+
+.video-container {
+    height: 100%;
+    width: 100%;
+    .parallax & {
+        @include position(fixed, $top: 0);
+    }
+    video {
+        display: flex;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}

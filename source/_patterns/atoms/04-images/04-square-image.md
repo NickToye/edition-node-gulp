@@ -1,5 +1,5 @@
 ---
 title: Square Image
-state: inprogress
+state: complete
 ---
 A square image element.

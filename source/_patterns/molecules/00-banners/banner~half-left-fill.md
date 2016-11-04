@@ -1,6 +1,6 @@
 ---
 title: Banner Half Left Fill 
-state: inprogress
+state: complete
 
 ---
 Banner with half left fill, muted background applied.

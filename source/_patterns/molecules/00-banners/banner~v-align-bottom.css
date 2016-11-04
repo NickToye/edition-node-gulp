@@ -1,0 +1,15 @@
+// objects/_objects.banners.scss
+
+.c-banner {
+    // banner code
+
+    &--v-align-bottom {
+	    justify-content: flex-end;
+    }
+
+    &__wrapper {
+        .c-banner--v-align-bottom & {
+            padding-bottom: 35px;
+        }
+    }
+}

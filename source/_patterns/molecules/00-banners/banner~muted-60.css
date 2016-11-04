@@ -1,0 +1,36 @@
+// components/_components.banner.scss
+
+.c-banner {
+	background: #3F3F3F;
+	color: palette(sofology, white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 530px;
+    padding: 35px 0;
+    position: relative;
+    z-index: 2;
+
+    &--muted {
+        padding: 0;
+
+        &:after {
+            @include position($top: 0, $left: 0, $right: 0, $bottom: 0);
+		    content: '';
+		    background-color: inherit;
+		    z-index: 1;
+	    }
+
+	    &--60:after {
+		    opacity: .6;
+	    }
+    }
+
+    &__wrapper {
+        .c-banner--muted & {
+            position: absolute;
+		    z-index: 2;
+	    }
+    }
+}
+

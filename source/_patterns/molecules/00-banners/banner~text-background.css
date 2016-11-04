@@ -1,0 +1,21 @@
+// objects/_objects.banners.scss
+
+.c-banner {
+    // banner code
+
+    &__text {
+	    width: 78%;
+	    align-self: center;
+	    flex-direction: column;
+
+		&--bg {
+			padding: 25px;
+		}
+
+		&--inner {
+			position: relative;
+			z-index: 2;
+		}
+
+    }
+}

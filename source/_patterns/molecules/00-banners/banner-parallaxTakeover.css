@@ -1,0 +1,30 @@
+// objects/_objects.banners.scss
+
+.c-banner {
+    // banner code
+
+    &--parallax {
+        padding: 0;
+        z-index: 1;
+    }
+
+    .parallax {
+        display: flex;
+        align-items: center;
+        background-image: url('http://placeimg.com/1572/1118/nature');
+        height: 1000px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &--takeover {
+            height: 100vh;
+        }
+    }
+
+    &__wrapper {
+        .c-banner--parallax & {
+    	    margin: 0 5%;
+	    }
+    }
+}

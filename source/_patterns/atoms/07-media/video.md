@@ -1,5 +1,5 @@
 ---
 title: Video
-state: inprogress
+state: complete
 ---
 A basic video element.

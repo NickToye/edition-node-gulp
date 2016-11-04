@@ -1,0 +1,26 @@
+// objects/_objects.colours.scss
+
+.c-banner {
+    // banner code
+
+    &--muted {
+        padding: 0;
+
+        &:after {
+    	    @include position($top: 0, $left: 0, $right: 0, $bottom: 0);
+		    content: '';
+		    background-color: inherit;
+		    z-index: 1;
+	    }
+
+	    &--40:after {
+		    opacity: .4;
+	    }
+
+    }
+}
+
+.sofology-blue-bg { @include componentContrast(blue); }
+
+
+

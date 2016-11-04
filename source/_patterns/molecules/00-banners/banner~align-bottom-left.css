@@ -1,0 +1,38 @@
+// components/_components.banner.scss
+
+.c-banner {
+	background: #3F3F3F;
+	color: palette(sofology, white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 530px;
+    padding: 35px 0;
+    position: relative;
+    z-index: 2;
+
+    // Vertical Align the banner container
+    &--v-align-bottom {
+	    justify-content: flex-end;
+    }
+
+    &__wrapper {
+
+        // Horizontally Align the wrapper
+        .c-banner--h-align-left & {
+            align-self: flex-start;
+            justify-content: flex-start;
+            width: 95%;
+            margin: 0 2.5%;
+            .c-banner__text {
+                width: 50%;
+                align-self: flex-start;
+                text-align: left;
+            }
+            .actions {
+	            justify-content: flex-start;
+            }
+        }
+    }
+}
+

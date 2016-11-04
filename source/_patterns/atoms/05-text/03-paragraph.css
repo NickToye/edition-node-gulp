@@ -1,0 +1,3 @@
+// objects/_objects.type.scss
+
+p { @include typesetting(p); }

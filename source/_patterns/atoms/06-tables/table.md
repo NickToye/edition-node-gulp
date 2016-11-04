@@ -1,5 +1,7 @@
 ---
 title: Tables
-state: inprogress
+state: complete
 ---
 Basic table element.
+
+NB.  Currently not used

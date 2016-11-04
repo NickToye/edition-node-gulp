@@ -1,6 +1,6 @@
 ---
 title: Banner Muted 20
-state: inprogress
+state: complete
 
 ---
 Basic muted banner with 20% opacity.

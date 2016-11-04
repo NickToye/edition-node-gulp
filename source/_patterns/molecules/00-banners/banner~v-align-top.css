@@ -1,0 +1,15 @@
+// objects/_objects.banners.scss
+
+.c-banner {
+    // banner code
+
+    &--v-align-top {
+	    justify-content: flex-start;
+    }
+
+    &__wrapper {
+        .c-banner--v-align-top & {
+            padding-top: 35px;
+        }
+    }
+}

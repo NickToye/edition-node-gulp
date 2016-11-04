@@ -1,5 +1,5 @@
 ---
 title: Paragraph
-state: inprogress
+state: complete
 ---
-This is a *Markdown* description of my pattern.
+Paragraph element, we are using mixins, maps and functions to generate responsive type

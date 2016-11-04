@@ -1,0 +1,9 @@
+// objects/_objects.banners.scss
+
+.c-banner {
+    // banner code
+}
+
+// objects/_objects.colours.scss
+
+.sofology-black-bg { @include componentContrast(black); }
