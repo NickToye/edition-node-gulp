@@ -26,9 +26,9 @@
     }
   },
   "styleGuideExcludes": [
-      "organisms",
-      "templates",
-      "pages"
+    "organisms",
+    "templates",
+    "pages"
   ],
   "defaultPattern": "all",
   "defaultShowPatternInfo": false,
@@ -78,5 +78,11 @@
     "markupOnly": ".markup-only"
   },
   "cleanOutputHtml": true,
-  "plugin-node-tab": false
+  "plugin-node-tab": true,
+  "plugins": {
+    "plugin-node-tab": {
+      "enabled": true,
+      "initialized": false
+    }
+  }
 }

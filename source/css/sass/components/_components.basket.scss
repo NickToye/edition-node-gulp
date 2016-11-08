@@ -6,7 +6,6 @@
    ========================================================================== */
 
 .basket-icon a {
-    outline: 1px dashed magenta;
     position: relative;
 
     .fa-bag {
@@ -15,13 +14,13 @@
 
     .bag-count {
         @include circular(rem(14), palette(sofology, blue));
-        @include position($top: 6px, $left: 3px);
+        @include position($top: 40%, $left: 50%);
         color: palette(sofology, white);
-        font-family: typeface(sofology, regular);
+        font-family: typeface(regular);
         font-size: rem(12);
         line-height: rem(14);
         text-align: center;
-        transform: translateX(-50%);
+        transform: translate(-50%,-50%);
     }
 
 }
