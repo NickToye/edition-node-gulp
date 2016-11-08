@@ -266,7 +266,7 @@
 @mixin componentContrast($palette, $contrast:dark, $context:null, $after:false) {
     background: palette(sofology,$palette) !important;
 
-    
+
 	@if $after == true {
 	        background: none !important;
 	        position: relative;
@@ -280,7 +280,7 @@
 			    bottom: 0;
 		    }
         }
-    
+
     @if $contrast == "light" {
         color: palette(sofology,medium-grey) !important;
         ul li {
@@ -298,12 +298,12 @@
                 color: palette(sofology, white) !important;
             }
         }
-        
+
         .c-btn--#{$palette} {
 	        border-color: palette(sofology, $palette) !important;
         }
 */
-        
+
 
         @if $context == "rdp" {
             small {
@@ -323,14 +323,14 @@
             }
 
         }
-        
+
         h1,h2,h3,p,ul,li {
 	        color: inherit !important;
 	    }
 
     }
     @else {
-	    
+
         color: palette(sofology,white) !important;
         ul li {
             border-color: palette(sofology, white) !important;
@@ -340,7 +340,7 @@
             background-color: transparent;
             border-color: inherit;
             color: palette(sofology, white) !important;
-            
+
             &:hover {
                 background-color: palette(sofology, white) !important;
                 border-color: palette(sofology, white) !important;
@@ -348,8 +348,8 @@
             }
         }
 */
-        
-        
+
+
         @if $context == "rdp" {
             small {
                 color: palette(sofology, white) !important;
@@ -369,12 +369,12 @@
 
         }
     }
-    
+
 
 }
 
 @mixin componentButtons($palette, $contrast:dark) {
-	
+
 	background-color: palette(sofology, $palette);
 	border-color: palette(sofology, $palette);
 	color: palette(sofology, white);
@@ -382,7 +382,7 @@
 		background-color: darken(palette(sofology, $palette),10%);
 		border-color: darken(palette(sofology, $palette),10%);
 	}
-	
+
 	@if $contrast == "light" {
 		color: palette(sofology, dark-grey);
 	}
@@ -426,6 +426,36 @@
     }
 }
 
+@mixin socialContrast($palette, $contrast:dark, $stack:false) {
+
+    @if $stack == false {
+        color: palette(socials, $palette);
+        transition: all linear $transition-speed;
+        &:hover {
+            color: shade(palette(socials, $palette), 30%);
+        }
+    }
+
+
+    // Stacks
+    @if $stack == true {
+        .fa-stack-2x {
+            color: palette(socials, $palette);
+            transition: color linear $transition-speed;
+        }
+        .fa-stack-1x {
+            color: palette(sofology, white);
+        }
+
+        &:hover {
+            .fa-stack-2x {
+                color: shade(palette(socials, $palette), 30%);
+            }
+        }
+    }
+
+}
+
 /// Applied some rotation to give a shimmer
 
 @mixin swatches-metallic($swatch, $swatch2) {
@@ -435,6 +465,8 @@
 
 // BRAND ICONS
 /// .brand-twitter { @include brand-icon(brand-colours('twitter')); }
+
+// *** DELETE ***
 
 @mixin brand-icon($brand) {
     i.fa-stack-2x {

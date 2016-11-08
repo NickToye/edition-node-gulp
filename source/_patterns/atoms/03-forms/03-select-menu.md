@@ -1,5 +1,5 @@
 ---
 title: Select Menu
-state: inprogress
+state: complete
 ---
 A basic select element.

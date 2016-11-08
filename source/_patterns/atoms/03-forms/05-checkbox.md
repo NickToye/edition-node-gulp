@@ -1,5 +1,5 @@
 ---
 title: Checkbox
-state: inprogress
+state: complete
 ---
 A basic checkbox element.

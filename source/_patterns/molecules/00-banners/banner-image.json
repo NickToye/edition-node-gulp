@@ -1,3 +1,5 @@
 {
-    "cta": true
+    "cta": true,
+    "verticalArrows": true,
+    "lg-icon": true
 }

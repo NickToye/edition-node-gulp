@@ -1,0 +1,28 @@
+// objects/_objects.forms.scss
+
+.c-controls {
+
+	// Label
+	&__label {
+
+	}
+
+	// Control
+    &__control {
+        @include typesetting(input);
+        color: palette(sofology, medium-grey);
+        padding: 19px 25px;
+
+        &--select {
+            // styles here
+        }
+
+        &--radio {
+            // styles here
+        }
+
+        &--checkbox {
+            // styles here
+        }
+    }
+}

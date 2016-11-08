@@ -1,5 +1,6 @@
 {
     "image": true,
     "cta": true,
+    "verticalArrows": true,
     "lg-icon": true
 }

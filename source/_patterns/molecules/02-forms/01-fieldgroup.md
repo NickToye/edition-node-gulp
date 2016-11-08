@@ -1,5 +1,5 @@
 ---
 title: Fieldgroup
-state: inprogress
+state: complete
 ---
 A basic fieldgroup element.

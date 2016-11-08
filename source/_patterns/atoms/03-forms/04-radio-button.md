@@ -1,5 +1,5 @@
 ---
 title: Radio Button
-state: inprogress
+state: complete
 ---
 A basic radio button element.

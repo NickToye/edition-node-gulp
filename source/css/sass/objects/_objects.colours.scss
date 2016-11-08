@@ -56,3 +56,24 @@
 .sofology-caution { @include componentContrast(caution, light); }
 .sofology-negative { @include componentContrast(negative); }
 .sofology-info { @include componentContrast(info, light); }
+
+
+// Social Colours
+
+// Icon
+.fa-facebook { @include socialContrast(facebook); }
+.fa-twitter { @include socialContrast(twitter); }
+.fa-linkedin { @include socialContrast(linkedin); }
+.fa-google-plus { @include socialContrast(google); }
+.fa-pinterest-p { @include socialContrast(pinterest); }
+.fa-instagram { @include socialContrast(instagram); }
+.fa-youtube-play { @include socialContrast(youtube); }
+
+// Stacked
+.facebook-brand { @include socialContrast(facebook, $stack:true); }
+.twitter-brand { @include socialContrast(twitter, $stack:true); }
+.linkedin-brand { @include socialContrast(linkedin, $stack:true); }
+.google-brand { @include socialContrast(google, $stack:true); }
+.pinterest-brand { @include socialContrast(pinterest, $stack:true); }
+.instagram-brand { @include socialContrast(instagram, $stack:true); }
+.youtube-brand { @include socialContrast(youtube, $stack:true); }

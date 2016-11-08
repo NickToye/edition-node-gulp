@@ -1,0 +1,27 @@
+/* ==========================================================================
+   #BASKET
+   ========================================================================== */
+
+/* Basket Icon.
+   ========================================================================== */
+
+.basket-icon a {
+    outline: 1px dashed magenta;
+    position: relative;
+
+    .fa-bag {
+        color: palette(sofology, dark-grey);
+    }
+
+    .bag-count {
+        @include circular(rem(14), palette(sofology, blue));
+        @include position($top: 6px, $left: 3px);
+        color: palette(sofology, white);
+        font-family: typeface(sofology, regular);
+        font-size: rem(12);
+        line-height: rem(14);
+        text-align: center;
+        transform: translateX(-50%);
+    }
+
+}
