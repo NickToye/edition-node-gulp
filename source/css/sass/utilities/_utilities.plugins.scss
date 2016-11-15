@@ -1,0 +1,22 @@
+/* ==========================================================================
+   #PLUGINS
+   ========================================================================== */
+
+.u-headroom {
+    will-change: transform;
+    transition: transform linear $transition-speed;
+
+    &--pinned {
+        transform: translateY(0%);
+    }
+
+    &--pinned,
+    &--not-top {
+        @include position(fixed, $top: 0, $left: 0, $right: 0);
+        z-index: 10;
+    }
+
+    &--unpinned {
+        transform: translateY(-100%);
+    }
+}

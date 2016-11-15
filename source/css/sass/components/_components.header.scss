@@ -1,0 +1,12 @@
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+
+header {
+    @include flexbox($direction: column);
+    background: palette(sofology, dark-grey);
+    height: 110px;
+    justify-content: center;
+    padding: $inuit-global-spacing-unit;
+}
+

@@ -1,7 +1,7 @@
-<div class="c-banner{{# sofology-blue }} sofology-blue-bg {{/ sofology-blue }}{{# sofology-red }} sofology-red-bg {{/ sofology-red }}{{# sofology-pale-grey }} sofology-pale-grey-bg {{/ sofology-pale-grey }}{{# sofology-light-grey }} sofology-light-grey-bg {{/ sofology-light-grey }}{{# sofology-medium-grey }} sofology-medium-grey-bg {{/ sofology-medium-grey }}{{# sofology-dark-grey }} sofology-dark-grey-bg {{/ sofology-dark-grey }}{{# sofology-black }} sofology-black-bg {{/ sofology-black }}{{# image }} c-banner--img {{/ image }}{{# video }} c-banner--video {{/ video }}{{# muted }} c-banner--muted{{/ muted }}{{# muted-20 }} c-banner--muted--20 {{/ muted-20 }}{{# muted-40 }} c-banner--muted--40 {{/ muted-40 }}{{# muted-60 }} c-banner--muted--60 {{/ muted-60 }}{{# muted-80 }} c-banner--muted--80 {{/ muted-80 }}{{# half-left-fill }} c-banner--half-left {{/ half-left-fill }}{{# half-right-fill }} c-banner--half-right {{/ half-right-fill }}{{# v-align-top }} c-banner--v-align-top {{/ v-align-top }}{{# v-align-bottom }} c-banner--v-align-bottom {{/ v-align-bottom }}{{# h-align-left }} c-banner--h-align-left {{/ h-align-left }}{{# h-align-right }} c-banner--h-align-right {{/ h-align-right }}">
+<div class="c-banner {{# takeover }}c-banner--takeover{{/ takeover }}{{# sofology-blue }} sofology-blue-bg {{/ sofology-blue }}{{# sofology-red }} sofology-red-bg {{/ sofology-red }}{{# sofology-pale-grey }} sofology-pale-grey-bg {{/ sofology-pale-grey }}{{# sofology-light-grey }} sofology-light-grey-bg {{/ sofology-light-grey }}{{# sofology-medium-grey }} sofology-medium-grey-bg {{/ sofology-medium-grey }}{{# sofology-dark-grey }} sofology-dark-grey-bg {{/ sofology-dark-grey }}{{# sofology-black }} sofology-black-bg {{/ sofology-black }}{{# image }} c-banner--img {{/ image }}{{# video }} c-banner--video {{/ video }}{{# muted }} c-banner--muted{{/ muted }}{{# muted-20 }} c-banner--muted--20 {{/ muted-20 }}{{# muted-40 }} c-banner--muted--40 {{/ muted-40 }}{{# muted-60 }} c-banner--muted--60 {{/ muted-60 }}{{# muted-80 }} c-banner--muted--80 {{/ muted-80 }}{{# half-left-fill }} c-banner--half-left {{/ half-left-fill }}{{# half-right-fill }} c-banner--half-right {{/ half-right-fill }}{{# v-align-top }} c-banner--v-align-top {{/ v-align-top }}{{# v-align-bottom }} c-banner--v-align-bottom {{/ v-align-bottom }}{{# h-align-left }} c-banner--h-align-left {{/ h-align-left }}{{# h-align-right }} c-banner--h-align-right {{/ h-align-right }}">
 
     {{# image }}
-	    {{> atoms-hero:c-block-hero__img }}
+	    {{> atoms-hero }}
     {{/ image }}
 
 
@@ -32,18 +32,20 @@
     		    <h1 class="{{# animated }} animated {{/ animated }}  {{# fadeInUp }} fadeInUp {{/ fadeInUp }}">Prices that start low and stay low </h1>
     		    <h2 class="{{# animated }} animated {{/ animated }}  {{# fadeInUp }} fadeInUp {{/ fadeInUp }}">This is a sub header</h2>
     		    <p class="{{# animated }} animated {{/ animated }}  {{# fadeInUp }} fadeInUp {{/ fadeInUp }}">We could spend lots of time and effort creating endless sales and promotions. Raising prices to lower them again and misleading you on the real value of your new sofa, but we don't believe in that. Instead we offer the best price we can permanently and spend our time finding great sofa collections that will make you feel right at home instead.</p>
-    		    <div class="actions">
-        		    {{# cta }}
-        		        {{> molecules-cta }}
-        		    {{/ cta }}
+    		    <div class="o-actions">
+        		    <div class="o-actions__inner">
+            		    {{# cta }}
+            		        {{> molecules-cta }}
+            		    {{/ cta }}
 
-        		    {{# cta2 }}
-        		        {{> molecules-cta }}
-        		    {{/ cta2 }}
+            		    {{# cta2 }}
+            		        {{> molecules-cta }}
+            		    {{/ cta2 }}
 
-                    {{# storefinder }}
-                        {{> molecules-inline-form }}
-                    {{/ storefinder }}
+                        {{# storefinder }}
+                            {{> molecules-inline-form }}
+                        {{/ storefinder }}
+        		    </div>
     		    </div>
     	    </div>
 

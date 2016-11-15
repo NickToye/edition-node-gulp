@@ -8,17 +8,13 @@
 .basket-icon a {
     position: relative;
 
-    .fa-bag {
-        color: palette(sofology, dark-grey);
-    }
-
     .bag-count {
-        @include circular(rem(14), palette(sofology, blue));
-        @include position($top: 40%, $left: 50%);
+        @include circular(rem(25), palette(sofology, blue));
+        @include position($top: 25%, $left: 50%);
         color: palette(sofology, white);
         font-family: typeface(regular);
-        font-size: rem(12);
-        line-height: rem(14);
+        font-size: rem(16);
+        line-height: rem(25);
         text-align: center;
         transform: translate(-50%,-50%);
     }

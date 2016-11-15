@@ -1,0 +1,10 @@
+// components/_components.banner.scss
+
+.c-banner {
+    // Banner code
+
+    // Image element of banner
+    &--img {
+        padding: 0;
+    }
+}

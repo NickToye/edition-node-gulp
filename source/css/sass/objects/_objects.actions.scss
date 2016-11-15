@@ -1,0 +1,31 @@
+/* ==========================================================================
+   #OBJECTS
+   ========================================================================== */
+
+.o-actions {
+    @include flexbox($direction: column);
+
+    &__inner {
+        @include flexbox($direction: column);
+        align-self: center;
+
+        .c-banner--h-align-left &,
+        .c-banner--h-align-right &,
+        .c-banner--half-left & {
+            align-self: flex-start;
+        }
+    }
+
+    .c-btn,
+    .c-form {
+        flex: auto;
+    }
+
+    .c-btn {
+        margin-bottom: $inuit-global-spacing-unit/2;
+    }
+
+    .c-form .c-btn {
+        margin-bottom: 0;
+    }
+}

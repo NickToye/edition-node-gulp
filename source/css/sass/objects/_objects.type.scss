@@ -238,11 +238,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, p {
 }
 
 
-h1 { @include typesetting(h1); }
-h2 { @include typesetting(h2); }
-h3 { @include typesetting(h3); }
-h4 { @include typesetting(h4); }
-h5 { @include typesetting(h5); }
+h1, .h1 { @include typesetting(h1); }
+h2, .h2 { @include typesetting(h2); }
+h3, .h3 { @include typesetting(h3); }
+h4, .h4 { @include typesetting(h4); }
+h5, .h5 { @include typesetting(h5); }
 p { @include typesetting(p); }
 
 

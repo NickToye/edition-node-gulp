@@ -101,3 +101,42 @@
 }
 
 
+/**
+ * Testing MQs
+*/
+
+.mq-test {
+    @include size(100%,100vh);
+    @include flexbox();
+    @extend .h4;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    &:after {
+        @extend .h1;
+        content: ' Village';
+        background-color: palette(sofology, dark-grey);
+        border: 1px solid palette(sofology, black);
+        border-radius: $global-radius * 2;
+        color: palette(sofology, white);
+        display: block;
+        margin: $inuit-global-spacing-unit/2 !important;
+        padding: $inuit-global-spacing-unit;
+        text-align: center;
+        @include mq($from: town) {
+            content: ' Town';
+        }
+        @include mq($from: city) {
+            content: ' City';
+        }
+        @include mq($from: country) {
+            content: ' Country';
+        }
+        @include mq($from: continent) {
+            content: ' Continent';
+        }
+        @include mq($from: world) {
+            content: ' World';
+        }
+    }
+}

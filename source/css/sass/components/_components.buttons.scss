@@ -179,8 +179,14 @@ $btn-ghost-border-width: 2px;
             @include position(absolute, $top: 20px);
         }
     }
+
 }
 
+.c-btn--direction:last-of-type {
+  .c-banner:last-of-type & {
+    display: none;
+  }
+}
 
 
 

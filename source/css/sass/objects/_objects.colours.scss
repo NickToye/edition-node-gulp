@@ -58,6 +58,12 @@
 .sofology-info { @include componentContrast(info, light); }
 
 
+// Icon Colours
+.fa {
+    color: palette(sofology, dark-grey);
+    &.sofology-white { color: palette(sofology, white); }
+}
+
 // Social Colours
 
 // Icon

@@ -1,15 +1,7 @@
 // components/_components.banner.scss
 
 .c-banner {
-	background: #3F3F3F;
-	color: palette(sofology, white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 530px;
-    padding: 35px 0;
-    position: relative;
-    z-index: 2;
+    // Banner code
 
     // Vertical Align the banner container
     &--v-align-bottom {

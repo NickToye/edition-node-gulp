@@ -1,8 +1,8 @@
 // components/_components.banner.scss
 
 .c-banner {
-	background: #3F3F3F;
-	color: palette(sofology, white);
+    background: #3F3F3F;
+    color: palette(sofology, white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,4 +10,30 @@
     padding: 35px 0;
     position: relative;
     z-index: 2;
+
+    // Content wrapper
+    &__wrapper {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        width: 90%;
+        text-align: center;
+    }
+
+    // Text
+    &__text {
+        align-self: center;
+        flex-direction: column;
+        width: 78%;
+
+        &--inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        &--inner > *:last-child {
+            margin: 0;
+        }
+
+    }
 }
