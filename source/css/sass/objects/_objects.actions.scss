@@ -6,7 +6,7 @@
     @include flexbox($direction: column);
 
     &__inner {
-        @include flexbox($direction: column);
+        @include flexbox($direction: row);
         align-self: center;
 
         .c-banner--h-align-left &,
@@ -14,18 +14,43 @@
         .c-banner--half-left & {
             align-self: flex-start;
         }
+
+        > *:first-child {
+            margin-right: $inuit-global-spacing-unit/2;
+        }
+
+
     }
 
-    .c-btn,
     .c-form {
         flex: auto;
+        max-width: none;
     }
 
     .c-btn {
         margin-bottom: $inuit-global-spacing-unit/2;
+        &--ghost {
+            flex: auto;
+        }
     }
 
     .c-form .c-btn {
         margin-bottom: 0;
     }
+
+    .c-btn[min-width~="340px"] {
+        margin-right: 0;
+    }
+
+    .c-form--inline {
+        .c-controls {
+            width: 100%;
+            &__control {
+                flex: auto;
+                max-width: none;
+            }
+        }
+    }
+
+
 }

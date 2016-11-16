@@ -169,14 +169,22 @@ $btn-ghost-border-width: 2px;
         background: none;
         border: none;
         color: inherit;
+        @include inuit-hidden-visually();
         font-size: rem(48);
-        left: 50%;
-        transform: translateX(-50%);
+        .c-banner--parallax & {
+
+        }
         &.fa-angle-down {
-            @include position(absolute, $bottom: 20px);
+                @include position($bottom: $inuit-global-spacing-unit);
+                width: 100%;
         }
         &.fa-angle-up {
-            @include position(absolute, $top: 20px);
+                @include position($top: $inuit-global-spacing-unit);
+                width: 100%;
+        }
+
+        .c-banner--takeover & {
+            @include inuit-hidden-visually(show);
         }
     }
 

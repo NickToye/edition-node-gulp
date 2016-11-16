@@ -3,13 +3,11 @@
    ========================================================================== */
 
 .c-banner {
-	background: #3F3F3F;
+    @include flexbox();
+	background: palette(sofology, medium-grey);
 	color: palette(sofology, white);
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    min-height: 530px;
-    padding: 35px 0;
+    padding: $inuit-global-spacing-unit 0;
     position: relative;
     z-index: 2;
     &--img,
@@ -18,17 +16,30 @@
 	    padding: 0;
     }
 
+
+    &--img {
+        background: url('http://placeimg.com/1572/1118/nature') no-repeat;
+        background-size: cover;
+        padding: $inuit-global-spacing-unit 0;
+    }
+
+
+    &--half-left,
+    &--half-right {
+        padding: 0;
+    }
+
+
     &--square {
         max-width: 600px;
     }
 
-    &--h-align-left {
 
-    }
+    &--h-align-left { }
 
-    &--h-align-right {
 
-    }
+    &--h-align-right { }
+
 
     &--takeover {
         height: 100vh;
@@ -41,20 +52,22 @@
         }
     }
 
+
     &--parallax {
         padding: 0;
         z-index: 1;
     }
 
+
     .parallax {
-        display: flex;
+        @include flexbox($direction: row);
         align-items: center;
         background-image: url('http://placeimg.com/1572/1118/tech');
-        height: 1000px;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        height: 1000px;
 
         &--takeover {
             height: 100vh;
@@ -66,40 +79,8 @@
 
 	    &:after {
     	    @include position($top: 0, $left: 0, $right: 0, $bottom: 0);
+            background-color: inherit;
 		    content: '';
-		    background-color: inherit;
-		    z-index: 1;
-	    }
-
-	    &--20:after {
-		    opacity: .2;
-	    }
-	    &--40:after {
-		    opacity: .4;
-	    }
-	    &--60:after {
-		    opacity: .6;
-	    }
-	    &--80:after {
-		    opacity: .8;
-	    }
-
-
-
-    }
-
-    &--muted-txt {
-
-        position: relative;
-
-	    &:after {
-		    content: '';
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		    right: 0;
-		    bottom: 0;
-		    background-color: inherit;
 		    z-index: 1;
 	    }
 
@@ -119,10 +100,37 @@
     }
 
 
+    &--muted-txt,
     &--muted-half {
 
         position: relative;
+        &:after {
+            @include position($top: 0, $left: 0, $right: 0, $bottom: 0);
+            background-color: inherit;
+            content: '';
+            z-index: 1;
+	    }
 
+	    &--20:after {
+		    opacity: .2;
+	    }
+	    &--40:after {
+		    opacity: .4;
+	    }
+	    &--60:after {
+		    opacity: .6;
+	    }
+	    &--80:after {
+		    opacity: .8;
+	    }
+
+    }
+
+
+/*
+    &--muted-half {
+
+        position: relative;
 	    &:after {
 		    content: '';
 		    position: absolute;
@@ -151,6 +159,7 @@
 
 
     }
+*/
 
 
     // Vertical Align the banner container
@@ -165,74 +174,67 @@
 
     // Wrapper
     &__wrapper {
-
-	    display: flex;
+        @include flexbox();
 	    align-self: center;
 	    justify-content: center;
-	    width: 90%;
 	    text-align: center;
+	    width: 90%;
 
-	    .c-banner--img &,
 	    .c-banner--video &,
 	    .c-banner--muted &,
 	    .c-banner--takeover & {
 		    position: absolute;
 	    }
+
 	    .c-banner--parallax & {
     	    margin: 0 5%;
 	    }
 
         // Vertically Align the wrapper
         .c-banner--v-align-top & {
-            padding-top: 35px;
+            padding-top: $inuit-global-spacing-unit;
         }
 
         .c-banner--v-align-bottom & {
-            padding-bottom: 35px;
+            padding-bottom: $inuit-global-spacing-unit;
         }
 
         // Horizontally Align the wrapper
-        .c-banner--h-align-left & {
+        .c-banner--h-align-left &,
+        .c-banner--h-align-right & {
             align-self: flex-start;
             justify-content: flex-start;
-            width: 95%;
             margin: 0 2.5%;
+            width: 95%;
+
             .c-banner__text {
-                width: 50%;
                 align-self: flex-start;
                 text-align: left;
+                width: 50%;
             }
+
             .o-actions {
 	            justify-content: flex-start;
             }
+
         }
 
         .c-banner--h-align-right & {
-            align-self: flex-start;
             justify-content: flex-end;
-            text-align: left;
-            width: 95%;
-            margin: 0 2.5%;
+
             .c-banner__text {
-                width: 50%;
                 align-self: flex-end;
-                text-align: left;
             }
-            .o-actions {
-	            justify-content: flex-start;
-            }
+
         }
 
 
-
 	    .c-banner--left-text & {
-		    justify-content: flex-start;
-		    text-align: left;
-		    padding-left: 5%;
 		    align-self: flex-start;
+		    justify-content: flex-start;
+		    padding-left: 5%;
+		    text-align: left;
 		    width: 50%;
-
-
 	    }
 
 	    .c-banner--left-text {
@@ -240,14 +242,12 @@
 	    }
 
 
-
-
 	    .c-banner--right-text & {
+		    align-self: flex-end;
 		    justify-content: flex-end;
-		    text-align: left;
 		    padding-right: 4%;
 		    padding-left: 0;
-		    align-self: flex-end;
+		    text-align: left;
 		    width: 50%;
 	    }
 
@@ -256,21 +256,24 @@
 	    }
 
 	    .c-banner--half-left & {
-    	    background: inherit;
-		    width: 50%;
+    	    @include size(50%, 100%);
 		    align-self: flex-start;
-		    height: 100%;
+    	    background: inherit;
+		    flex: 1;
 		    text-align: left;
+
 		    .o-actions {
     		    justify-content: flex-start;
 		    }
 	    }
 
 	    .c-banner--half-right & {
-		    width: 50%;
+    	    @include size(50%, 100%);
+		    align-items: flex-start;
 		    align-self: flex-end;
-		    height: 100%;
+		    flex: 1;
 		    text-align: left;
+
 		    .o-actions {
 			    justify-content: flex-start;
 		    }
@@ -278,12 +281,13 @@
     }
 
     &__text {
-	    width: 78%;
 	    align-self: center;
 	    flex-direction: column;
+        padding: $inuit-global-spacing-unit 0;
+	    width: 78%;
 
 		&--bg {
-			padding: 25px;
+			padding: $inuit-global-spacing-unit;
 		}
 
 		&--inner {
@@ -314,6 +318,5 @@
 	        }
 	    }
 	}
-
 
 }
