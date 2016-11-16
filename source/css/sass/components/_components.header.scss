@@ -4,9 +4,11 @@
 
 header {
     @include flexbox($direction: column);
-    background: palette(sofology, dark-grey);
+    background: palette(sofology, black);
     height: 110px;
     justify-content: center;
+    margin: 0 auto;
+    max-width: 1600px;
     padding: $inuit-global-spacing-unit;
 }
 

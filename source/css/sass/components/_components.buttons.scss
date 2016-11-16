@@ -169,7 +169,7 @@ $btn-ghost-border-width: 2px;
         background: none;
         border: none;
         color: inherit;
-        @include inuit-hidden-visually();
+        visibility: hidden;
         font-size: rem(48);
         .c-banner--parallax & {
 
@@ -184,7 +184,7 @@ $btn-ghost-border-width: 2px;
         }
 
         .c-banner--takeover & {
-            @include inuit-hidden-visually(show);
+            visibility: visible;
         }
     }
 
@@ -195,6 +195,14 @@ $btn-ghost-border-width: 2px;
     display: none;
   }
 }
+
+/*
+.c-banner--takeover {
+    .c-btn--direction {
+        @include inuit-hidden-visually(show);
+    }
+}
+*/
 
 
 

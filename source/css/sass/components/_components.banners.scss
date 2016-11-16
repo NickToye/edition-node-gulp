@@ -13,6 +13,7 @@
     &--img,
     &--video,
     &--muted {
+        flex-direction: row;
 	    padding: 0;
     }
 
@@ -23,9 +24,13 @@
         padding: $inuit-global-spacing-unit 0;
     }
 
+    &--half-left {
+        justify-content: flex-start;
+        padding: 0;
+    }
 
-    &--half-left,
     &--half-right {
+        justify-content: flex-end;
         padding: 0;
     }
 
@@ -180,10 +185,8 @@
 	    text-align: center;
 	    width: 90%;
 
-	    .c-banner--video &,
-	    .c-banner--muted &,
-	    .c-banner--takeover & {
-		    position: absolute;
+	    .c-banner--video & {
+		    @include position($top: 50%);
 	    }
 
 	    .c-banner--parallax & {
@@ -192,17 +195,19 @@
 
         // Vertically Align the wrapper
         .c-banner--v-align-top & {
+            align-self: flex-start;
             padding-top: $inuit-global-spacing-unit;
         }
 
         .c-banner--v-align-bottom & {
+            align-self: flex-end;
             padding-bottom: $inuit-global-spacing-unit;
         }
 
         // Horizontally Align the wrapper
         .c-banner--h-align-left &,
         .c-banner--h-align-right & {
-            align-self: flex-start;
+
             justify-content: flex-start;
             margin: 0 2.5%;
             width: 95%;
@@ -259,7 +264,6 @@
     	    @include size(50%, 100%);
 		    align-self: flex-start;
     	    background: inherit;
-		    flex: 1;
 		    text-align: left;
 
 		    .o-actions {
@@ -271,7 +275,6 @@
     	    @include size(50%, 100%);
 		    align-items: flex-start;
 		    align-self: flex-end;
-		    flex: 1;
 		    text-align: left;
 
 		    .o-actions {

@@ -16,6 +16,10 @@
         z-index: 10;
     }
 
+    &--top {
+        position: static;
+    }
+
     &--unpinned {
         transform: translateY(-100%);
     }

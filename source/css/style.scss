@@ -6,7 +6,17 @@
     background: palette(sofology, dark-grey);
 }
 
+// Body classes
 
+body {
+    &.template {
+        background: palette(sofology, dark-grey);
+        .container {
+            align-self: center;
+            max-width: 1600px;
+        }
+    }
+}
 
 
 
