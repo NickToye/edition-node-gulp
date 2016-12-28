@@ -3,11 +3,11 @@
    ========================================================================== */
 
 .o-actions {
-    @include flexbox($direction: column);
-
+    @include flexbox($direction: row);
+    justify-content: center;
     &__inner {
         @include flexbox($direction: row);
-        align-self: center;
+        align-self: flex-start;
 
         .c-banner--h-align-left &,
         .c-banner--h-align-right &,

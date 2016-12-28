@@ -17,9 +17,17 @@
 	    padding: 0;
     }
 
+    &--video {
+      .c-btn {
+        @include position($top: 50%, $left: 50%);
+        border: none;
+        transform: translate(-50%, -50%);
+      }
+    }
 
     &--img {
-        background: url('http://placeimg.com/1572/1118/nature') no-repeat;
+        background-image: url('http://placeimg.com/1572/1118/nature');
+        background-repeat: no-repeat;
         background-size: cover;
         padding: $inuit-global-spacing-unit 0;
     }
@@ -130,41 +138,6 @@
 	    }
 
     }
-
-
-/*
-    &--muted-half {
-
-        position: relative;
-	    &:after {
-		    content: '';
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		    right: 0;
-		    bottom: 0;
-		    background-color: inherit;
-		    z-index: 1;
-	    }
-
-	    &--20:after {
-		    opacity: .2;
-	    }
-	    &--40:after {
-		    opacity: .4;
-	    }
-	    &--60:after {
-		    opacity: .6;
-	    }
-	    &--80:after {
-		    opacity: .8;
-	    }
-
-
-
-
-    }
-*/
 
 
     // Vertical Align the banner container

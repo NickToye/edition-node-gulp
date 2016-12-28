@@ -161,6 +161,30 @@ $btn-ghost-border-width: 2px;
 
 
 
+/* Play buttons
+   =========================================================================== */
+
+.c-btn {
+  &--play {
+    @include size(115px, 44px);
+    background: url('http://images.sofology.co.uk/image/upload/v1482332295/Sofology/Banners/playBtn.png') no-repeat 0 0;
+    background-size: cover;
+    @include mq(city) {
+        @include size(145px, 52px);
+    }
+    @include mq(country) {
+        @include size(173px, 65px);
+    }
+    &:hover {
+      background: url('http://images.sofology.co.uk/image/upload/v1482332295/Sofology/Banners/playBtn.png') no-repeat 0 0;
+    }
+  }
+}
+
+
+
+
+
 /* Directional buttons
    =========================================================================== */
 

@@ -6,7 +6,7 @@
 // feature switches, etc. in here.
 
 $inuit-config: (
-  env: dev,
+  env: live,
   healthcheck: false,
   debug: true
 );
@@ -21,4 +21,57 @@ $inuit-config: (
 
 @function inuit-config($key) {
   @return map-get($inuit-config, $key);
+}
+
+@mixin striped-bg ($stripe-color: rgb(255, 0, 0),  $stripes-num: 4,$direction: 45deg) {
+  $transparent: rgba(0, 0, 0, 0);
+
+  $stripes-num: $stripes-num * 2;
+  $stripe-width: 100% /$stripes-num;
+  $gradient: ();
+
+  @for $i from 1 through ($stripes-num - 1){
+    $item: $stripe-color;
+    $dump: ();
+
+    @if $i % 2  == 0 {$dump:  $item $stripe-width * ($i), $transparent $stripe-width * $i;}
+    @else { $dump:  $transparent $stripe-width * $i, $item $stripe-width * ($i);}
+    $gradient: join($gradient, $dump, comma);
+  }
+  background: linear-gradient($direction, $gradient);
+}
+
+@mixin simple-stripes($color: rgb(255, 0, 0), $size: 40px, $mirrored: false) {
+    $angle: 45deg;
+    @if $mirrored {$angle: $angle * -1}
+    @if $size % 2 != 0 {
+        $size: $size + 1px;
+    }
+    $intensity: 2;
+    @include striped-bg($color,$intensity,$angle);
+    background-size: $size $size;
+}
+
+@if (inuit-config(env) == 'dev') {
+  body {
+    &:before {
+      content: '';
+      height: 16px;
+      @include simple-stripes(rgb(169, 68, 66));
+    }
+
+
+  }
+}
+
+@if (inuit-config(env) == 'live') {
+  body {
+    &:before {
+      content: '';
+      height: 8px;
+      @include simple-stripes(rgb(89, 178, 90));
+    }
+
+
+  }
 }

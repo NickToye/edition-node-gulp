@@ -52,11 +52,15 @@
 
 // Utility Colours
 
-.sofology-positive { @include componentContrast(positive, light); }
+.sofology-positive { @include componentContrast(positive); }
 .sofology-caution { @include componentContrast(caution, light); }
 .sofology-negative { @include componentContrast(negative); }
-.sofology-info { @include componentContrast(info, light); }
+.sofology-info { @include componentContrast(info); }
 
+.sofology-positive--txt { color: palette(sofology, positive); }
+.sofology-caution--txt { color: palette(sofology, caution); }
+.sofology-negative--txt { color: palette(sofology, negative); }
+.sofology-info--txt { color: palette(sofology, info); }
 
 // Icon Colours
 .fa {
